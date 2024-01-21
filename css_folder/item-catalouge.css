@@ -1,0 +1,32 @@
+/* Container tha contains all the item instances */
+.items-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Block that contains all info of one item*/
+.item-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Pic of item in block*/
+.item-pics{
+    border: 5px solid black;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
+/* Name of item in block*/
+.item-name{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Price of item in block*/
+.item-price{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
