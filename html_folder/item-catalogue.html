@@ -8,9 +8,25 @@
     
 </head>
 <body>
-
+    <!-- Header -->
     <header w3-include-html="header.html"> 
     </header>
+
+    <form class = "filter">
+        <!-- id="option" -->
+        <input type="radio" id = "option-all" name="category" data-value="all" oninput="filterCreator(event)" checked>
+        <label for="option-all">All</label><br>
+        <input type="radio" id = "option-laptop" name="category" data-value="laptop" oninput="filterCreator(event)">
+        <label for="option-laptop">Laptops</label><br>
+        <input type="radio" id = "option-mouse" name="category" data-value="mouse" oninput="filterCreator(event)">
+        <label for="option-mouse">Mouses</label><br>
+        <input type="radio" id = "option-keyboard" name="category" data-value="keyboard" oninput="filterCreator(event)">
+        <label for="option-keyboard">Keyboard</label><br>
+        <input type="radio" id = "option-phone" name="category" data-value="phone" oninput="filterCreator(event)">
+        <label for="option-phone">Phones</label><br>
+        <input type="radio" id = "option-headphone" name="category" data-value="headphone" oninput="filterCreator(event)">
+        <label for="option-headphone">Headphones</label><br>
+    </form>
 
     <section class = "items-container">
         

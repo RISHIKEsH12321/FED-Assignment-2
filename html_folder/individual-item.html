@@ -7,13 +7,25 @@
     <title>Document</title>
 </head>
 <body>
+    <header w3-include-html="header.html"> 
+    </header>
+    
     <section class = "main-details">
         <img id = "main-img">
-    </section>
+        <div>
+            <h1 id = "item-name"></h1>
+            <h2 id = "item-price"></h2>
+            <div id = "item-colors"></div>
+            <button id = "add-to-cart" type="button" onclick="AddToCart(event)">Add to Cart</button>
+        </div>
 
-    <section class = "extra-details">
-
     </section>
+    <hr>
+    <p id = "item-details"></p>
+
+
+    <footer w3-include-html="footer.html">
+    </footer>
     <script src="/js_folder/script.js"></script>
     <script src="/js_folder/individual-item.js"></script>
 </body>
