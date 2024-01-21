@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css_folder/normalize.css">
+    <link rel="stylesheet" href="/css_folder/account.css">
+</head>
+<body>
+    <header w3-include-html="header.html" class="bg-light"> 
+    </header>
+    <br>
+    <div class="container bg-light w-25">
+        <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input id="name" class="form-control" type="text" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password:</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+
+            <a href="/html_folder/signUp.html" id="question" class="btn">Havent created a account?</a>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+    </div>
+    <br>
+    <footer w3-include-html="footer.html" class="bg-light">
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="/js_folder/script.js"></script>
+</body>
+</html>

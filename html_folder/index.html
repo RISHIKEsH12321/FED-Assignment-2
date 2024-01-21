@@ -4,14 +4,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="../css_folder/normalize.css">
+    <link rel="stylesheet" href="../css_folder/home.css">
 </head>
 <body>
-    <header w3-include-html="header.html"> 
+    <!--Header-->
+    <header w3-include-html="header.html" class="bg-light"> 
     </header>
-    <footer w3-include-html="footer.html">
+    <!--Promotions/events-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="../Images/Promotional1.png" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../Images/Promotional2.png" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="..." alt="Third slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <br>
+    <!--Laptop Best seller-->
+    <div class="container">
+        <h2>Best Seller for <br> Laptop
+        </h2>
+        <div class="row">
+            <div class="col-sm">
+                <img src="https://picsum.photos/200" alt="Product 1">
+                <p>Lenovo IdeaPad 3</p>
+                <p>$489</p>
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/200" alt="Product 1">
+                <p>ASUS Vivobook Pro 15X <br> OLED</p>
+                <p>$2,851</p>
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/200" alt="Product 1">
+                <p>MSI GF 63 Thin</p>
+                <p>$1,566</p>
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/200" alt="Product 1">
+                <p>ACER Swift Go 14</p>
+                <p>$998</p>
+            </div>
+        </div>
+    </div>
+    <!--Keyboard Best seller-->
+    <div class="container">
+        <h2>Best Seller for <br> Keyboard
+        </h2>
+        <div class="row">
+            <div class="col-sm">
+                <img src="https://picsum.photos/200" alt="Product 1">
+                <p>Logitech Pop Keys</p>
+                <p>$100</p>
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/200" alt="Product 1">
+                <p>Razer BlackWidow V4 Pro</p>
+                <p>$284</p>
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/200" alt="Product 1">
+                <p>Logitech Pro X</p>
+                <p>$150</p>
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/200" alt="Product 1">
+                <p>NZXT Function</p>
+                <p>$130</p>
+            </div>
+        </div>
+    </div>
+    <!--Mouse Best seller-->
+    <div class="container">
+        <h2>Best Seller for <br> Mouse
+        </h2>
+        <div class="row">
+            <div class="col-sm">
+                <img src="https://picsum.photos/200" alt="Product 1">
+                <p>Razer Viper V2 Pro</p>
+                <p>$130</p>
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/200" alt="Product 1">
+                <p>Logitech G502 LIGHTSPEED</p>
+                <p>$150</p>
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/200" alt="Product 1">
+                <p>Fantech Aria XD7</p>
+                <p>$70</p>
+            </div>
+            <div class="col-sm">
+                <img src="https://picsum.photos/200" alt="Product 1">
+                <p>Razer DeathAdder V3</p>
+                <p>$170</p>
+            </div>
+        </div>
+    </div>
+    <!--Footer-->
+    <footer w3-include-html="footer.html" class="bg-light">
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="/js_folder/script.js"></script>
+    <script src="/js_folder/home.js"></script>
 </body>
 </html>
