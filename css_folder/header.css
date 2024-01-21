@@ -1,0 +1,23 @@
+#logo{
+    height: 80px;
+}
+
+#imgbutton{
+    flex-grow: 1;
+    justify-content: right;
+    align-items: flex-end;
+}
+.sidepng{
+    height: 40px;
+    max-width: 100%;
+}
+
+nav{
+    border: solid 1px #d3d3d3;
+    justify-content: space-around !important;
+}
+
+.navbar-item{
+    color: black;
+    text-decoration: none;
+}
