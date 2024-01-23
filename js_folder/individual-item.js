@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function (){
         .then(data => {
             console.log(data);
             var mainItemPic = document.querySelector("#main-img");
-            mainItemPic.src = '../pictures/item-pics/' + data.picture_file_name + '.jpg';
+            mainItemPic.src = 'pictures/item-pics/' + data.picture_file_name + '.jpg';
             var name = document.getElementById("item-name");
             name.innerText = data.name;
             var price = document.getElementById("item-price");

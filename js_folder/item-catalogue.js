@@ -46,7 +46,7 @@ function CreateItem(data){
 
     //Creating the img and adding it to the block
     var img = document.createElement('img');
-    img.src = '../pictures/item-pics/' + data.picture_file_name + '.jpg';
+    img.src = 'pictures/item-pics/' + data.picture_file_name + '.jpg';
     img.className = "item-pics";
     div.appendChild(img);
 
