@@ -16,8 +16,13 @@ document.addEventListener("DOMContentLoaded", function (){
     }
 
     objectDataParam = objectDataParam.replace(/["']/g, '');
+    var lottieContainer = document.getElementById('lottie-container');
+
+    // Show Lottie animation container before making the API request
+    lottieContainer.style.display = 'block';
 
     var itemURL = "https://electronics-a398.restdb.io/rest/item/" + objectDataParam;
+
 
     fetch(itemURL, settings)
         .then(response => response.json())        
@@ -61,6 +66,8 @@ document.addEventListener("DOMContentLoaded", function (){
 
                 color_container.appendChild(color_choice_block);
             }
+            document.getElementById("add-to-cart").hidden = false; 
+            lottieContainer.style.display = 'none';
         })
 });
 

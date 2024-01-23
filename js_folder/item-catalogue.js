@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var itemContainer = document.querySelector('.items-container');
+    var lottieContainer = document.getElementById('lottie-container');
+
+    // Show Lottie animation container before making the API request
+    lottieContainer.style.display = 'block';
 
     fetch("https://electronics-a398.restdb.io/rest/item", settings)
         .then(response => response.json())        
@@ -31,8 +35,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     itemContainer.appendChild(item); 
                     console.log("Created one item");
                 }
-                
             }
+            // Hide Lottie animation container after API request is complete
+            lottieContainer.style.display = 'none';
         })
         
 

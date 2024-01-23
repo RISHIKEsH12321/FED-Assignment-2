@@ -9,24 +9,30 @@
 <body>
     <header w3-include-html="header.html"> 
     </header>
-    
+
+    <div id="lottie-container" class="animation-container" style="display: none;">
+        <dotlottie-player src="https://lottie.host/d38a0961-78ff-4833-bb38-7b19bb2c207e/2lmEBmaity.json" 
+        background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+    </div>
+
     <section class = "main-details">
         <img id = "main-img">
         <div>
             <h1 id = "item-name"></h1>
             <h2 id = "item-price"></h2>
             <div id = "item-colors"></div>
-            <button id = "add-to-cart" type="button" onclick="AddToCart(event)">Add to Cart</button>
+            <button id = "add-to-cart" type="button" onclick="AddToCart(event)" hidden>Add to Cart</button>
         </div>
 
     </section>
     <hr>
     <p id = "item-details"></p>
 
-
     <footer w3-include-html="footer.html">
     </footer>
     <script src="js_folder/script.js"></script>
     <script src="js_folder/individual-item.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
 </body>
 </html>
