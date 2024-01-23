@@ -62,9 +62,15 @@ document.addEventListener("DOMContentLoaded", function (){
                 color_container.appendChild(color_choice_block);
             }
         })
-        
-
-
-
-
 });
+
+function AddToCart(event){
+    var radioButtons = document.getElementsByName("color_choice");
+
+    for (var i = 0; i < radioButtons.length; i++) {
+        if (radioButtons[i].checked) {
+        console.log("Selected Color: " + radioButtons[i].value);
+        break; 
+        }
+    }
+};
