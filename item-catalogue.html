@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css_folder/item-catalouge.css">
     
 </head>
@@ -14,18 +15,18 @@
 
     <form class = "filter">
         <!-- id="option" -->
-        <input type="radio" id = "option-all" name="category" data-value="all" oninput="filterCreator(event)" checked>
-        <label for="option-all">All</label><br>
-        <input type="radio" id = "option-laptop" name="category" data-value="laptop" oninput="filterCreator(event)">
-        <label for="option-laptop">Laptops</label><br>
-        <input type="radio" id = "option-mouse" name="category" data-value="mouse" oninput="filterCreator(event)">
-        <label for="option-mouse">Mouses</label><br>
-        <input type="radio" id = "option-keyboard" name="category" data-value="keyboard" oninput="filterCreator(event)">
-        <label for="option-keyboard">Keyboard</label><br>
-        <input type="radio" id = "option-phone" name="category" data-value="phone" oninput="filterCreator(event)">
-        <label for="option-phone">Phones</label><br>
-        <input type="radio" id = "option-headphone" name="category" data-value="headphone" oninput="filterCreator(event)">
-        <label for="option-headphone">Headphones</label><br>
+        <input type="radio" class="btn-check" id = "option-all" name="category" data-value="all" oninput="filterCreator(event)" checked>
+        <label class="btn btn-info" for="option-all">All</label>
+        <input type="radio" class="btn-check" id = "option-laptop" name="category" data-value="laptop" oninput="filterCreator(event)">
+        <label class="btn btn-info" for="option-laptop">Laptops</label>
+        <input type="radio" class="btn-check" id = "option-mouse" name="category" data-value="mouse" oninput="filterCreator(event)">
+        <label class="btn btn-info" for="option-mouse">Mouses</label>
+        <input type="radio" class="btn-check" id = "option-keyboard" name="category" data-value="keyboard" oninput="filterCreator(event)">
+        <label class="btn btn-info" for="option-keyboard">Keyboard</label>
+        <input type="radio" class="btn-check" id = "option-phone" name="category" data-value="phone" oninput="filterCreator(event)">
+        <label class="btn btn-info" for="option-phone">Phones</label>
+        <input type="radio" class="btn-check" id = "option-headphone" name="category" data-value="headphone" oninput="filterCreator(event)">
+        <label class="btn btn-info" for="option-headphone">Headphones</label>
     </form>
 
     <section class = "items-container">
@@ -52,7 +53,10 @@
     <footer w3-include-html="footer.html">
     </footer>
 
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>    
     <script src="js_folder/script.js"></script>
     <script src = "js_folder/item-catalogue.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
