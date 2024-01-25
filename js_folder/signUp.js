@@ -27,11 +27,12 @@ function PostInfoToDB(e){
         },
         body: JSON.stringify(data)
     };
-    console.log(data)
+    //console.log(data)
     fetch("https://electronics-a398.restdb.io/rest/account", settings)
         .then(response => response.json())
         .then(jsoneResponse =>{
             console.log(jsoneResponse);
+
             }
         )
 
