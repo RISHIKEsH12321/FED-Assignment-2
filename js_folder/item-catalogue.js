@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var itemContainer = document.querySelector('.items-container');
     var lottieContainer = document.getElementById('lottie-container');
+    //lol
 
     // Show Lottie animation container before making the API request
     lottieContainer.style.display = 'block';
