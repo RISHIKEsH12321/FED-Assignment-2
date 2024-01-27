@@ -77,6 +77,46 @@ function AddToCart(event){
     for (var i = 0; i < radioButtons.length; i++) {
         if (radioButtons[i].checked) {
         console.log("Selected Color: " + radioButtons[i].value);
+        var customerData = JSON.parse(sessionStorage.getItem("customer-data"));
+        var custoemrid = customerData._id;
+        const APIKEY = "65ab8ff7384ac111a81414ff";
+        
+        var name = document.getElementById("item-name").innerHTML;
+        var price = parseFloat(document.getElementById("item-price").innerHTML.replace(/[^0-9.]/g, ''));
+        var color = radioButtons[i].value;
+        var imagePath = new URL(document.querySelector("#main-img").src).pathname;
+        
+        
+
+
+        let data = {
+            "quantity": 1,
+            "item_name": name,
+            "price": price,
+            "color": color,
+            "picture_file_name": imagePath,
+            "customer_id": custoemrid
+        };
+        console.log(data);
+    
+        let settings = {
+            method: "POST", 
+            headers: {
+                "Content-Type": "application/json",
+                "x-apikey": APIKEY,
+                "Cache-Control": "no-cache"
+            },
+            body: JSON.stringify(data)
+        };
+
+        fetch("https://electronics-a398.restdb.io/rest/cart", settings)
+        .then(response => response.json())
+        .then(jsoneResponse =>{
+            console.log(jsoneResponse);
+
+            }
+        )
+
         break; 
         }
     }
