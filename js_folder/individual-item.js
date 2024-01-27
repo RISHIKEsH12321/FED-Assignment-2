@@ -72,6 +72,13 @@ document.addEventListener("DOMContentLoaded", function (){
 });
 
 function AddToCart(event){
+    var customerData = JSON.parse(sessionStorage.getItem("customer-data"));
+    var customerId = customerData ? customerData._id : null;
+
+    if (customerId === null) {
+        alert("Customer data or customer id is null. Cannot proceed with adding to cart.");
+        return; // Stop the rest of the function
+    }
     var radioButtons = document.getElementsByName("color_choice");
 
     for (var i = 0; i < radioButtons.length; i++) {

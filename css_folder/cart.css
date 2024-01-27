@@ -1,0 +1,11 @@
+.cart-item-pic{
+    border: 5px solid black;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    justify-content: centers;
+}
+
+.td :nth-child(1){
+    width: 20%;
+}
