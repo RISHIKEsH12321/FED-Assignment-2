@@ -94,7 +94,6 @@ function AddToCart(event){
         var color = radioButtons[i].value;
         var imagePath = new URL(document.querySelector("#main-img").src).pathname;
         var qty  = Number(document.getElementById("count").textContent);
-        
 
 
         let data = {
@@ -128,6 +127,7 @@ function AddToCart(event){
         break; 
         }
     }
+    window.alert("Successfully added item to cart.")
 };
 
 
@@ -149,7 +149,7 @@ addButton.addEventListener("click", function(){
 
 
 minusButton.addEventListener("click", function(){
-    if (count > 0){
+    if (count > 1){
         count--;
         updateDisplay();
     }    

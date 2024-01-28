@@ -93,10 +93,14 @@ function DeleteCartItem(event, itemId){
             "Cache-Control": "no-cache"
         },
     };
+    var itemBlock = event.target.closest('tr');
 
     fetch(url, settings)
-    .then(response => response.json())        
+    .then(response => {
+        itemBlock.remove();        
+    })      
     .catch(error => {
         console.error('Error:', error);
     });
+    
 }
