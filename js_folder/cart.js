@@ -24,8 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         fetch("https://electronics-a398.restdb.io/rest/cart", settings)
         .then(response => response.json())        
         .then(data => {
-            for (var i = 0; i < data.length; i++){
-                console.log(data[i].customer_id === customerId);
+            for (var i = 0; i < data.length; i++){                
                 if (data[i].customer_id === customerId ){
                     console.log(data[i]);
                     var item = CreateCartItem(data[i]);
@@ -42,6 +41,7 @@ function CreateCartItem(data){
     var color = data.color;
     var quantity = data.quantity;
     var picFilePath = data.picture_file_name;
+    var id = data._id;
 
     var block = document.createElement("tr");
     
@@ -56,18 +56,47 @@ function CreateCartItem(data){
     nameBlock.innerText = name;
     block.appendChild(nameBlock);
 
-    var priceBlock = document.createElement("td");
-    priceBlock.innerText = price;
-    block.appendChild(priceBlock);
-
     var colroBlock = document.createElement("td");
     colroBlock.innerText = color;
     block.appendChild(colroBlock);
+
+    var priceBlock = document.createElement("td");
+    priceBlock.innerText = price;
+    block.appendChild(priceBlock);    
 
     var quantityBlock = document.createElement("td");
     quantityBlock.innerText = quantity;
     quantity.value = price;
     block.appendChild(quantityBlock);
 
+    var deleteItem = document.createElement("button");
+    deleteItem.type ="button"
+    deleteItem.innerText = "X";
+    deleteItem.value = id;
+    deleteItem.id = id;
+    deleteItem.onclick = function(event) { DeleteCartItem(event, id); };
+    block.appendChild(deleteItem);
+
     return block;
+}
+
+function DeleteCartItem(event, itemId){
+    const APIKEY = "65ab8ff7384ac111a81414ff";
+    var url = "https://electronics-a398.restdb.io/rest/cart/" + itemId;
+    console.log(url);
+
+    let settings = {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "x-apikey": APIKEY,
+            "Cache-Control": "no-cache"
+        },
+    };
+
+    fetch(url, settings)
+    .then(response => response.json())        
+    .catch(error => {
+        console.error('Error:', error);
+    });
 }

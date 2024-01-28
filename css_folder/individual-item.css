@@ -1,3 +1,10 @@
 .main-details{
     display: flex;
 }
+
+
+.button1{
+    border-radius: 25%;;
+    width: 220%;
+    height: 220%;
+}
