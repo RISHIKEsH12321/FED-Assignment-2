@@ -12,7 +12,7 @@ function loginCheck(event){
         }
     };
     
-    var password = document.getElementById('exampleInputPassword1').value;
+    var password = document.getElementById('password').value;
     var email = document.getElementById('email').value;
     
     fetch("https://electronics-a398.restdb.io/rest/account", settings)
