@@ -4,9 +4,9 @@ function PostInfoToDB(e){
     
 
     var name = document.getElementById('name').value;
-    var passwords = document.getElementById('exampleInputPassword1').value;
+    var passwords = document.getElementById('password').value;
     var phoneNum = document.getElementById('contact').value;
-    var email = document.getElementById('exampleInputEmail1').value;
+    var email = document.getElementById('email').value;
     var address = document.getElementById('address').value;
 
     
