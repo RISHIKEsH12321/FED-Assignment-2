@@ -17,8 +17,10 @@
     </div>
 
     <section class = "main-details">
-        <img id = "main-img">
-        <div>
+        <div id="image-container">
+            <img id="main-img" style="display: none;">
+        </div>        
+        <div class = "details-container">
             <h1 id = "item-name"></h1>
             <h2 id = "item-price"></h2>
             <div id = "item-colors"></div>
@@ -28,12 +30,12 @@
                 <button type="button" id="add" class="button1">+</button>
             </div>
             <br>
-            <button id = "add-to-cart" type="button" onclick="AddToCart(event)" hidden>Add to Cart</button>
+            <button id = "add-to-cart" type="button" class="btn btn-primary" onclick="AddToCart(event)" hidden>Add to Cart</button>
         </div>
 
     </section>
     <hr>
-    <p id = "item-details"></p>
+    <p id = "item-details" style="display: none;"></p>
 
     <footer w3-include-html="footer.html">
     </footer>

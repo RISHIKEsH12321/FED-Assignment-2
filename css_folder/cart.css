@@ -1,11 +1,20 @@
-.cart-item-pic{
+.cart-item-pic {
     border: 5px solid black;
     width: 100%;
     max-width: 300px;
     height: auto;
-    justify-content: centers;
+    display: block; /* Add display: block; for vertical-align to work */
+    margin: 0 auto; /* Center the image horizontally */
 }
 
-.td :nth-child(1){
-    width: 20%;
+td {
+    vertical-align: middle;
+    font-weight: bold;
 }
+
+td:nth-child(1) {
+    width: 20%;
+    height: auto;
+}
+
+

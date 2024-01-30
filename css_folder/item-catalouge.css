@@ -1,48 +1,69 @@
 /* Contains all radio buttons and labels*/
-.filter{
+.filter {
     display: flex;
     justify-content: center;
+    margin-top: 20px; /* Adjust margin for better spacing */
 }
-
 /* Label of options */
-.filter label{
-    color:white;
+.filter label {
+    color: white;
     width: 10%;
-    margin: 20px;
+    margin: 10px; /* Adjust margin for better spacing */
 }
 
 /* Container tha contains all the item instances */
-.items-container{
+.items-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Add gap between item blocks for better spacing */
+    margin: 20px;
 }
 
+
 /* Block that contains all info of one item*/
-.item-block{
+.item-block {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center; /* Center text in the item block */
+    padding: 20px; /* Add padding for spacing */
+    background-color: #f8f9fa; /* Set background color for better visibility */
+    border: 1px solid #dee2e6; /* Add border for better separation */
+    border-radius: 8px; /* Optional: Add border radius for a rounded look */
+
 }
+
+.item-block:hover {
+    background-color: #e2e6ea;
+}
+
+
 /* Pic of item in block*/
-.item-pics{
-    border: 5px solid black;
+.item-pics {
+    /* border: 5px solid black; */
     width: 100%;
     max-width: 150px;
     height: auto;
 }
 
 /* Name of item in block*/
-.item-name{
+.item-name {
+    margin-top: 10px; /* Adjust margin for better spacing */
+    margin-bottom: 10px;
+    font-weight: bold; /* Add bold font for better visibility */
+}
+/* Price of item in block*/
+.item-price {
     margin-top: 5px;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
-/* Price of item in block*/
-.item-price{
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
 
 /* Block holding the filter options*/
 
-
+.animation-container1{
+    display: flex;
+    justify-content: center;
+}

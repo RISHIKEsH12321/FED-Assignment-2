@@ -67,7 +67,7 @@ function CreateItem(data){
 
     var price = document.createElement('p');
     price.className = "item-price";
-    price.textContent = "$" + data.price;
+    price.textContent = "$" + parseFloat(data.price).toFixed(2);
     div.appendChild(price)
 
     return div;

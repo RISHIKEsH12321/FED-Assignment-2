@@ -61,7 +61,8 @@ function CreateCartItem(data){
     block.appendChild(colroBlock);
 
     var priceBlock = document.createElement("td");
-    priceBlock.innerText = price;
+    // priceBlock.innerText = price;
+    priceBlock.innerText = "$" + parseFloat(data.price).toFixed(2);
     block.appendChild(priceBlock);    
 
     var quantityBlock = document.createElement("td");
@@ -69,13 +70,16 @@ function CreateCartItem(data){
     quantity.value = price;
     block.appendChild(quantityBlock);
 
+    var buttonContainer = document.createElement("td");
     var deleteItem = document.createElement("button");
     deleteItem.type ="button"
     deleteItem.innerText = "X";
     deleteItem.value = id;
     deleteItem.id = id;
+    deleteItem.className = "btn btn-light";
     deleteItem.onclick = function(event) { DeleteCartItem(event, id); };
-    block.appendChild(deleteItem);
+    buttonContainer.appendChild(deleteItem);
+    block.appendChild(buttonContainer);
 
     return block;
 }

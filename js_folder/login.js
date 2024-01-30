@@ -1,7 +1,7 @@
 const APIKEY = "65ab8ff7384ac111a81414ff";
 
 
-function loginCheck(){
+function loginCheck(event){
     event.preventDefault()
     let settings = {
         method: "GET", 

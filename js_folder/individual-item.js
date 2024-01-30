@@ -51,11 +51,12 @@ document.addEventListener("DOMContentLoaded", function (){
 
             for (i = 0; i < color_list.length;i++){
                 var color_choice_block = document.createElement("div");
+                color_choice_block.className = "color-option-block";
                 var color_button = document.createElement("input");
                 color_button.type = "radio";
                 color_button.name = "color_choice";
                 color_button.value = color_list[i];
-                color_button.class = "color_choice_radio_button";
+                color_button.class = "color_radio_button";
                 if (i === 0){
                     color_button.checked = true;
                 }
@@ -69,6 +70,9 @@ document.addEventListener("DOMContentLoaded", function (){
             document.getElementById("add-to-cart").hidden = false; 
             document.getElementById("quantity-block").hidden = false; 
             lottieContainer.style.display = 'none';
+            document.getElementById("main-img").style.display = "block";
+            document.getElementById("item-details").style.display = "block";
+            
         })
 });
 
