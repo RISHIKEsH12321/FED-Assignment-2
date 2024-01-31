@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     var customerData = JSON.parse(sessionStorage.getItem("customer-data"));
     var customerId = customerData ? customerData._id : null;
+    document.getElementById("checkout").style.display = "none";
+
 
     if (customerId === null) {
         alert("Customer data or customer id is null. Cannot proceed with adding to cart.");
@@ -104,3 +106,16 @@ function DeleteCartItem(event, itemId){
     });
     
 }
+
+document.getElementById("checkoutbtn").addEventListener("click",function(e){
+    e.preventDefault();
+    document.getElementById("checkout").style.display = "block";
+    
+    var data = sessionStorage.getItem("customer-data")
+    console.log(data);
+    var json = JSON.parse(data)
+    console.log(json["address"])
+    document.getElementById("address").value = json["address"];
+
+    
+})

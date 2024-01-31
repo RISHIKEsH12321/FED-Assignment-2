@@ -34,9 +34,25 @@
           <a href="item-catalogue.html"><button type="button" class="btn btn-light">Continue Shopping</button></a>
         </div>
         <div class="col text-end">
-          <a href=""><button type="button" class="btn btn-success" id="checkout">Proceed to Checkout</button></a>
+          <button type="button" class="btn btn-success" id="checkoutbtn">Proceed to Checkout</button>
         </div>
       </div>
+    </div>
+    <!--Checkout-->
+    <div class="container" id="checkout">
+      <form>
+        <div class="form-group">
+          <h2>Card Details</h2>
+          <input type="number" class="form-control" id="cardnumber" placeholder="Card Number" required>
+          <input type="month" class="form-control" id="cardexpiry" placeholder="Expiry Date" required>
+          <input type="text" class="form-control" id="cardname" placeholder="Name on Card" required>
+          <h2>Billing Address</h2>
+          <input type="text" class="form-control" id="address" placeholder="Address" required>
+        </div>
+      </form>
+      <br>
+      <p>Total: $<p id="total"></p></p>
+      <button type="button" class="btn btn-success" id="paymentbtn">Place Order</button></a>
     </div>
     <br>
     
