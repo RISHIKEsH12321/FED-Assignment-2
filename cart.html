@@ -42,16 +42,20 @@
     <div class="container" id="checkout">
       <form>
         <div class="form-group">
+          <br>
           <h2>Card Details</h2>
           <input type="number" class="form-control" id="cardnumber" placeholder="Card Number" required>
+          <br>
           <input type="month" class="form-control" id="cardexpiry" placeholder="Expiry Date" required>
+          <br>
           <input type="text" class="form-control" id="cardname" placeholder="Name on Card" required>
+          <br>
           <h2>Billing Address</h2>
           <input type="text" class="form-control" id="address" placeholder="Address" required>
         </div>
       </form>
       <br>
-      <p>Total: $<p id="total"></p></p>
+      <p id="total"></p>
       <button type="button" class="btn btn-success" id="paymentbtn">Place Order</button></a>
     </div>
     <br>

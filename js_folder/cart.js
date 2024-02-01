@@ -120,6 +120,36 @@ document.getElementById("checkoutbtn").addEventListener("click",function(e){
     var json = JSON.parse(data)
     console.log(json["address"])
     document.getElementById("address").value = json["address"];
-
     
+    var id = json["_id"];
+    console.log(id)
+
+    const APIKEY = "65ab8ff7384ac111a81414ff";
+
+    let settings = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "x-apikey": APIKEY,
+            "Cache-Control": "no-cache"
+        },
+    };
+
+    let total = 0
+
+    fetch("https://electronics-a398.restdb.io/rest/cart", settings)
+    .then(response => response.json())        
+    .then(data => {
+        for (var i = 0; i < data.length; i++){                
+            if (data[i].customer_id === id ){
+                console.log(data[i]);
+                total += data[i]["price"]
+                console.log(total)
+            }
+        }  
+        var t = document.getElementById("total");
+        t.innerHTML = "Total: $" + total;
+        console.log(t)     
+    })
+ 
 })
