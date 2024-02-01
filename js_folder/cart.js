@@ -49,7 +49,7 @@ function CreateCartItem(data){
     
     var picBlock = document.createElement("td");
     var imgElement = document.createElement("img");
-    imgElement.src = picFilePath;
+    imgElement.src = "/pictures/item-pics/" + picFilePath + ".jpg";
     imgElement.className = "cart-item-pic";
     picBlock.appendChild(imgElement);
     block.appendChild(picBlock);
@@ -115,13 +115,12 @@ document.getElementById("checkoutbtn").addEventListener("click",function(e){
     e.preventDefault();
     document.getElementById("checkout").style.display = "block";
     
-    var data = sessionStorage.getItem("customer-data")
-    console.log(data);
-    var json = JSON.parse(data)
-    console.log(json["address"])
-    document.getElementById("address").value = json["address"];
+    var CustomerData = JSON.parse(sessionStorage.getItem("customer-data"));
+
+    console.log(CustomerData["address"])
+    document.getElementById("address").value = CustomerData["address"];
     
-    var id = json["_id"];
+    var id = CustomerData["_id"];
     console.log(id)
 
     const APIKEY = "65ab8ff7384ac111a81414ff";
@@ -143,13 +142,126 @@ document.getElementById("checkoutbtn").addEventListener("click",function(e){
         for (var i = 0; i < data.length; i++){                
             if (data[i].customer_id === id ){
                 console.log(data[i]);
-                total += data[i]["price"]
-                console.log(total)
+                total += data[i]["price"] * data[i]["quantity"];
+                console.log(total);
+                //data[i].points += Math.ceil(total/25);
             }
         }  
         var t = document.getElementById("total");
         t.innerHTML = "Total: $" + total;
-        console.log(t)     
+        console.log(t);
+        //data.points += Math.ceil(total/25);
+        //console.log(data);
+        //sessionStorage.setItem("customer-data", data);
     })
  
-})
+});
+
+function AddPoints(e){
+    e.preventDefault();
+    document.getElementById("checkout").style.display = "block";
+    
+    var CustomerData = JSON.parse(sessionStorage.getItem("customer-data"));
+    var id = CustomerData._id;
+
+
+    const APIKEY = "65ab8ff7384ac111a81414ff";
+
+    let settings = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "x-apikey": APIKEY,
+            "Cache-Control": "no-cache"
+        },
+    };
+
+    fetch("https://electronics-a398.restdb.io/rest/cart", settings)
+    .then(response => response.json())        
+    .then(data => {
+        console.log(data)
+        var total = 0;
+        for (var i = 0; i < data.length; i++){                
+            if (data[i].customer_id === id ){
+                total += data[i].price * data[i].quantity;
+                console.log(total);
+                //data[i].points += Math.ceil(total/25);
+            }
+        }
+        CustomerData.points += Math.ceil(total/25);        
+        sessionStorage.setItem("customer-data", JSON.stringify(CustomerData));
+    })
+
+    UpdatePoints();
+    ClearCart();
+}
+
+function UpdatePoints(){
+    var CustomerData = JSON.parse(sessionStorage.getItem("customer-data"));
+    var url = "https://electronics-a398.restdb.io/rest/account/" + CustomerData._id;
+    const APIKEY = "65ab8ff7384ac111a81414ff";
+
+    let settings = {
+        method: "PUT", 
+        headers: {
+            "Content-Type": "application/json",
+            "x-apikey": APIKEY,
+            "Cache-Control": "no-cache"
+        },
+        body: JSON.stringify(CustomerData)
+    };
+    fetch(url, settings)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to update resource");
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+function DeleteCartItemInDatabase(itemId) {
+    const APIKEY = "65ab8ff7384ac111a81414ff";
+    var url = "https://electronics-a398.restdb.io/rest/cart/" + itemId;
+
+    let settings = {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "x-apikey": APIKEY,
+            "Cache-Control": "no-cache",
+        },
+    };
+
+    return fetch(url, settings);
+}
+function ClearCart(){
+    var CustomerData = JSON.parse(sessionStorage.getItem("customer-data"));
+    var id = CustomerData._id;
+    const APIKEY = "65ab8ff7384ac111a81414ff";
+
+    let settings = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            "x-apikey": APIKEY,
+            "Cache-Control": "no-cache"
+        },
+    };
+
+    fetch("https://electronics-a398.restdb.io/rest/cart", settings)
+    .then(response => response.json())        
+    .then(data => {
+        for (var i = 0; i < data.length; i++){                
+            if (data[i].customer_id === id ){
+                console.log(data[i]);
+                DeleteCartItemInDatabase(event, data[i]._id);
+            }
+        }        
+    })    
+}

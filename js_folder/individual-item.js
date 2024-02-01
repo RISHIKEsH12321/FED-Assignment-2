@@ -97,6 +97,8 @@ function AddToCart(event){
         var price = parseFloat(document.getElementById("item-price").innerHTML.replace(/[^0-9.]/g, ''));
         var color = radioButtons[i].value;
         var imagePath = new URL(document.querySelector("#main-img").src).pathname;
+        var fileNameWithoutExtension = imagePath.split('/').pop().replace(/\.[^/.]+$/, '');
+
         var qty  = Number(document.getElementById("count").textContent);
 
 
@@ -105,7 +107,7 @@ function AddToCart(event){
             "item_name": name,
             "price": price,
             "color": color,
-            "picture_file_name": imagePath,
+            "picture_file_name": fileNameWithoutExtension,
             "customer_id": custoemrid
         };
         console.log(data);

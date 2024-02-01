@@ -12,8 +12,8 @@
     <header w3-include-html="header.html" class="bg-light"> 
     </header>
     <br>
-    <div class="container bg-light w-25">
-        <form id = "login-form">
+    <div class="container bg-light w-25" >
+        <form id = "login-form" style="display: none;">
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input id="email" class="form-control" type="email" placeholder="Enter your email" required>
@@ -26,6 +26,15 @@
             <a href="signUp.html" id="question" class="btn">Havent created a account?</a>
             <button class="btn btn-success" onclick="loginCheck(event)">Submit</button>
           </form>
+    </div>
+    <div id = "show-cutomer-details" class="container bg-light w-25">
+        <div id = "show-name"></div>
+        <div id = "show-email"></div>
+        <div id = "show-number"></div>
+        <div id = "show-address"></div>
+        <div id = "show-points"></div>
+        <div id = "show-password"></div>
+        <button type="button" class="btn btn-success" onclick="LogOut(event)">Log Out</button> 
     </div>
     <br>
     <footer w3-include-html="footer.html" class="bg-light">

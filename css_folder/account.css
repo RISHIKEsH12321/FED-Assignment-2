@@ -5,3 +5,18 @@
 #question{
     padding: 20px !important;
 }
+
+#show-cutomer-details {
+    display: none; /* Initially hide the details */
+    margin-top: 20px;
+}
+
+#show-cutomer-details div {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#show-cutomer-details div span {
+    font-weight: bold;
+    margin-right: 10px;
+}
