@@ -1,3 +1,4 @@
+const itemIDs = [];
 document.addEventListener("DOMContentLoaded", function () {
     var customerData = JSON.parse(sessionStorage.getItem("customer-data"));
     var customerId = customerData ? customerData._id : null;
@@ -46,7 +47,7 @@ function CreateCartItem(data){
     var id = data._id;
 
     var block = document.createElement("tr");
-    
+    block.id = id + "block";
     var picBlock = document.createElement("td");
     var imgElement = document.createElement("img");
     imgElement.src = "/pictures/item-pics/" + picFilePath + ".jpg";
@@ -89,7 +90,7 @@ function CreateCartItem(data){
 function DeleteCartItem(event, itemId){
     const APIKEY = "65ab8ff7384ac111a81414ff";
     var url = "https://electronics-a398.restdb.io/rest/cart/" + itemId;
-    console.log(url);
+    console.log("Deleting: " + url);
 
     let settings = {
         method: "DELETE",
@@ -149,7 +150,7 @@ document.getElementById("checkoutbtn").addEventListener("click",function(e){
         }  
         var t = document.getElementById("total");
         t.innerHTML = "Total: $" + total;
-        console.log(t);
+        console.log("total: " + t);
         //data.points += Math.ceil(total/25);
         //console.log(data);
         //sessionStorage.setItem("customer-data", data);
@@ -162,38 +163,45 @@ function AddPoints(e){
     document.getElementById("checkout").style.display = "block";
     
     var CustomerData = JSON.parse(sessionStorage.getItem("customer-data"));
-    var id = CustomerData._id;
+    var points = CustomerData.points;
 
+    var itemIDs = [];
+    var total = 0;
 
-    const APIKEY = "65ab8ff7384ac111a81414ff";
+    
+    var cartItems = document.querySelectorAll("#item-cart-display tr");
 
-    let settings = {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-            "x-apikey": APIKEY,
-            "Cache-Control": "no-cache"
-        },
-    };
+    
+    cartItems.forEach(function(item) {
+        var itemId = item.id; 
+        var quantity = item.querySelector("td:nth-child(5)").innerText; 
+        var price = item.querySelector("td:nth-child(4)").innerText.replace("$", ""); 
+        
+        total += parseFloat(price) * parseInt(quantity);
+        console.log("Total of all items is: " + total);
+        itemIDs.push(itemId);
+    });
+    console.log(itemIDs);
 
-    fetch("https://electronics-a398.restdb.io/rest/cart", settings)
-    .then(response => response.json())        
-    .then(data => {
-        console.log(data)
-        var total = 0;
-        for (var i = 0; i < data.length; i++){                
-            if (data[i].customer_id === id ){
-                total += data[i].price * data[i].quantity;
-                console.log(total);
-                //data[i].points += Math.ceil(total/25);
-            }
-        }
-        CustomerData.points += Math.ceil(total/25);        
-        sessionStorage.setItem("customer-data", JSON.stringify(CustomerData));
-    })
+    console.log("Current Points: " + CustomerData.points);
 
+    //var t = parseFloat(document.getElementById("total").innerText);
+
+    CustomerData.points = points + Math.floor(total/25);
+
+    console.log("Updated Points: " + CustomerData.points);
+
+    console.log("Total of all items is: " + total);
+    
+    sessionStorage.setItem("customer-data", JSON.stringify(CustomerData));
     UpdatePoints();
-    ClearCart();
+    ClearCart(itemIDs);
+
+    // document.getElementById("waiting-animation").style.display = "block";
+
+    // setTimeout(function () {
+    //     window.location = 'index.html';
+    // },10000)
 }
 
 function UpdatePoints(){
@@ -228,6 +236,7 @@ function UpdatePoints(){
 function DeleteCartItemInDatabase(itemId) {
     const APIKEY = "65ab8ff7384ac111a81414ff";
     var url = "https://electronics-a398.restdb.io/rest/cart/" + itemId;
+    console.log("Deleting: " + url);
 
     let settings = {
         method: "DELETE",
@@ -244,28 +253,14 @@ function DeleteCartItemInDatabase(itemId) {
         console.log(response);
     })
 }
-function ClearCart(){
-    var CustomerData = JSON.parse(sessionStorage.getItem("customer-data"));
-    var id = CustomerData._id;
-    const APIKEY = "65ab8ff7384ac111a81414ff";
+function ClearCart(data){
+    var itemContainer = document.getElementById("item-cart-display");
+    itemContainer.innerHTML = null;
 
-    let settings = {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-            "x-apikey": APIKEY,
-            "Cache-Control": "no-cache"
-        },
-    };
 
-    fetch("https://electronics-a398.restdb.io/rest/cart", settings)
-    .then(response => response.json())        
-    .then(data => {
-        for (var i = 0; i < data.length; i++){                
-            if (data[i].customer_id === id ){
-                console.log(data[i]);
-                DeleteCartItemInDatabase(event, data[i]._id);
-            }
-        }        
-    })    
+    for (let i = 0; i<data.length;i++){
+        deleteIdID = data[i].substring(0, 24);
+        DeleteCartItemInDatabase(deleteIdID);
+        console.log("Called Delete: " + deleteIdID);
+    }
 }
