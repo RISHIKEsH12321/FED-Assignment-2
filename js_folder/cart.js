@@ -238,7 +238,11 @@ function DeleteCartItemInDatabase(itemId) {
         },
     };
 
-    return fetch(url, settings);
+    fetch(url, settings)
+    .then(response => {
+        response.json();
+        console.log(response);
+    })
 }
 function ClearCart(){
     var CustomerData = JSON.parse(sessionStorage.getItem("customer-data"));

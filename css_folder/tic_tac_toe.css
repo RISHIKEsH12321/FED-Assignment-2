@@ -1,0 +1,128 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+.container {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  width: 50vh;
+  align-items: center;
+  justify-content: center;
+  background: #0dcaf0;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+}
+
+h2{
+  color: #fff;
+  margin-top: 5px !important;
+  /* padding-bottom: 5px !important; */
+  font-size: 2rem;
+  width: fit-content;
+  padding: 5px 7px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+h3{
+  color: #fff;
+}
+
+.scoreboard {
+  width: fit-content;
+  justify-content:space-evenly;
+  flex-direction: column;
+  display: flex;
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
+}
+
+.play-area {
+  display: grid;
+  width: fit-content;
+  padding: 5px;
+  height: auto;
+  border: 3px solid white ;
+  grid-template-columns: auto auto auto;
+}
+
+.block {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: bold;
+  border: 3px solid white ;
+  margin: 5px;
+  border-radius: 5px;
+  transition:  0.2s ease-in-out;
+}
+
+.block:hover {
+  cursor: pointer;
+  background: rgb(15, 243, 15);
+  transform: scale(1.1);
+}
+
+.occupied:hover {
+  background: rgb(255, 58, 58);
+}
+
+.win {
+  background: rgb(15, 243, 15);
+}
+
+.win:hover {
+  background: rgb(15, 243, 15);
+}
+
+.button-holder {
+  display: flex;
+  width: 70%;
+  margin: 2em auto;
+  justify-content: center;
+}
+
+button {
+  outline: none;
+  border: 4px solid white;
+  padding: 10px 20px;
+  margin: 0 5px !important;
+  font-size: 1rem;
+  font-weight: bold;
+  background: none;
+  transition: all 0.2s ease-in-out;
+  background: #fff;
+  width: 150px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background: #0dcaf0;
+  color: white;
+}
+
+.playerWin {
+  color: green;
+}
+
+.computerWin {
+  color: red;
+}
+
+.draw {
+  color: darkorange;
+}
