@@ -37,7 +37,30 @@ function PostInfoToDB(e){
         )
 
     document.getElementById("account-info-form").reset();
+}
 
+addEventListener("DOMContentLoaded", function(){
+    var customerData = sessionStorage.getItem("customer-data");
+    customerData = JSON.parse(customerData);
+    console.log(customerData);
 
+    if (customerData === null){
+        document.getElementById("account-info-form").style.display = 'block'; // Use 'block' to make it visible
+    }
+    else{
+        document.getElementById("account-info-form").style.display = 'none';
+        document.getElementById("show-name").innerHTML = "Name: "+ customerData.name;
+        document.getElementById("show-email").innerHTML = "Email: " + customerData.email;
+        document.getElementById("show-number").innerHTML = "Contact Number: " + customerData.contact_no;
+        document.getElementById("show-address").innerHTML = "Address: " + customerData.address;
+        document.getElementById("show-points").innerHTML = "Points: " + customerData.points;
+        document.getElementById("show-password").innerHTML = "Password: " + customerData.password;
+        document.getElementById("show-cutomer-details").style.display = "block";
+    }
+});
 
+function LogOut(event){
+    var x = null;
+    sessionStorage.setItem("customer-data", x);
+    location.reload();
 }
