@@ -2,21 +2,21 @@
 .filter {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Adjust margin for better spacing */
+    margin-top: 20px;
 }
 /* Label of options */
 .filter label {
     color: white;
     width: 10%;
-    margin: 10px; /* Adjust margin for better spacing */
+    margin: 10px;
 }
 
 /* Container tha contains all the item instances */
 .items-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Add gap between item blocks for better spacing */
-    margin: 20px;
+    gap: 20px; 
+    margin: 50px;
 }
 
 
@@ -25,34 +25,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content:space-around; 
     text-align: center;
     padding: 20px;
     background-color: #f8f9fa;
     border: 1px solid #dee2e6;
     border-radius: 8px;
-
+    height: 350px;
 }
 
 .item-block:hover {
-    background-color: #e2e6ea;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* background-color: #e2e6ea; */
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+    transition: all 0.2s;
 }
 
 
 /* Pic of item in block*/
 .item-pics {
-    /* border: 5px solid black; */
     width: 100%;
     max-width: 150px;
     height: auto;
+    max-height: 10rlh;
 }
 
-/* Name of item in block*/
-.item-name {
-    margin-top: 10px; /* Adjust margin for better spacing */
+.item-name{
+    margin-top: 10px; 
     margin-bottom: 10px;
-    font-weight: bold; /* Add bold font for better visibility */
+    font-weight: bold; 
 }
 /* Price of item in block*/
 .item-price {
