@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css_folder/normalize.css">
+    <link rel="stylesheet" href="css_folder/wheel.css">
+</head>
+<body>
+    <!--Header-->
+    <header w3-include-html="header.html" class="bg-light"> 
+    </header>
+
+    <br>
+    <!--Wheel game-->
+    <div id="container">
+        <div>
+            <h2>How to play:</h2>
+            <ul>
+                <li>Spend $1000 for 100 points</li>
+                <li>Redeem 100 points to spin</li>
+                <li>Stand a chance to get discount vouchers</li>
+                <li>Prize will be send via email</li>
+            </ul>
+            <br><br><br>
+            <h2 id="prize"></h2>
+        </div>
+        <div id="mainbox" class="mainbox">
+            <div id="box" class="box">
+              <div id="firstHalf">
+                <span id="wheel1"><b>Nothing</b></span>
+                <span id="wheel2"><b>Nothing</b></span>
+                <span id="wheel3"><b>Nothing</b></span>
+                <span id="wheel4"><b>Nothing</b></span>
+              </div>
+              <div id="secondHalf">
+                <span id="wheel5"><b>$10 Discount</b></span>
+                <span id="wheel6"><b>$1000 Discount</b></span>
+                <span id="wheel7"><b>$20 Discount</b></span>
+                <span id="wheel8"><b>$0.10 Discount</b></span>
+              </div>
+            </div> 
+            <button class="spin" onclick="rotateFunction()">SPIN</button>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer w3-include-html="footer.html" class="bg-light">
+    </footer>
+
+    <script src="js_folder/script.js"></script>
+    <script src="js_folder/wheel.js"></script>
+</body>
+</html>

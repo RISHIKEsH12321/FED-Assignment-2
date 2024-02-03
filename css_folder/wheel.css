@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+}
+  
+.mainbox{
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+/*
+.mainbox:after{
+    position: absolute;
+    content: '';
+    width: 32px;
+    height: 32px;
+    background: url('arrow-left.png') no-repeat;
+    background-size: 32px;
+    right: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+}*/
+.box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    overflow: hidden;
+    transition: all ease 5s;
+}
+
+span{
+    width: 50%;
+    height: 50%;
+    display: inline-block;
+    position: absolute;
+}
+#wheel1{
+    clip-path: polygon(0 92%, 100% 50%, 0 8%);
+    background-color: #9973e6;
+    top: 120px;
+    left: 0;
+}
+#wheel2{
+    clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+    background-color: #9973e6;
+    top: 120px;
+    right: 0;
+}
+#wheel3{
+    clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+    background-color: #9973e6;
+    bottom: 0;
+    left: 120px;
+}
+#wheel4{
+    clip-path: polygon(50% 100%, 92% 0, 8% 0);
+    background-color: #9973e6;
+    top: 0;
+    left: 120px;
+}
+
+#wheel5{
+    clip-path: polygon(0 92%, 100% 50%, 0 8%);
+    background-color: #c68cff;
+    top: 120px;
+    left: 0;
+}
+#wheel6{
+    clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+    background-color: #c68cff;
+    top: 120px;
+    right: 0;
+}
+#wheel7{
+    clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+    background-color: #c68cff;
+    bottom: 0;
+    left: 120px;
+}
+#wheel8{
+    clip-path: polygon(50% 100%, 92% 0, 8% 0);
+    background-color: #c68cff;
+    top: 0;
+    left: 120px;
+}
+
+#firstHalf #wheel3 b{
+    transform: translate(-50%, -30%) rotate(-270deg);
+ }
+ #firstHalf #wheel1 b,
+ #secondHalf #wheel5 b{
+   transform: translate(-70%, -50%) rotate(185deg);
+ }
+ #secondHalf #wheel7 b{
+   transform: translate(-50%, -30%) rotate(90deg);
+ }
+ #firstHalf #wheel4 b,
+ #secondHalf #wheel8 b{
+   transform: translate(-50%, -70%) rotate(-85deg);
+ }
+
+ #firstHalf #wheel2 b,
+ #secondHalf #wheel6 b{
+   transform: translate(-30%, -50%)
+ }
+
+ span b{
+   font-size: 24px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ 
+ }
+ 
+ #secondHalf{
+   width: 100%;
+   height: 100%;
+   transform: rotate(-135deg);
+ }
+
+ .spin{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    background-color: #735eb2;
+    color: #fff;
+    box-shadow: 0 5px 20px #000;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer;
+}
+.spin:active{
+    width: 70px;
+    height: 70px;
+    font-size: 20px;
+}
