@@ -22,7 +22,7 @@ function rotateFunction(){
     }
     else{
         document.querySelector("button").disabled = false;
-        console.log(customerData.points )
+        console.log(customerData.points)
         customerData["points"] -= 100;
     }
     
@@ -69,5 +69,35 @@ function rotateFunction(){
     {
         document.getElementById("prize").innerHTML = "Congratulations you have won $20"; 
     }
+    
+    UpdatePoints();
 }
 
+function UpdatePoints(){
+    console.log(customerData.points)
+    var url = "https://electronics-a398.restdb.io/rest/account/" + customerData._id;
+    const APIKEY = "65ab8ff7384ac111a81414ff";
+
+    let settings = {
+        method: "PUT", 
+        headers: {
+            "Content-Type": "application/json",
+            "x-apikey": APIKEY,
+            "Cache-Control": "no-cache"
+        },
+        body: JSON.stringify(customerData)
+    };
+    fetch(url, settings)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to update resource");
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
