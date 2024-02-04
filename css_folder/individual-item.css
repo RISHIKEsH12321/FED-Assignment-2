@@ -74,5 +74,15 @@
     border-radius: 50px;
     line-height: 30px;
     font-weight: bold;
+    margin-top: 0%;
+    padding-top: 10px;
     /* border: 2px solid #0d6efd; */
+}
+
+@media only screen and (max-width: 420px){
+    #item-details{
+        margin-top: 0%;
+        padding-top: 10px;
+    }
+    
 }

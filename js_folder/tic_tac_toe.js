@@ -18,7 +18,7 @@ var CustomerData = JSON.parse(sessionStorage.getItem("customer-data"));
 
 initial_text_player_score = html_player_score.innerText;
 initial_text_computer_score = html_computer_score.innerText;
-customerPoints.innerText += customerPoints.innerText + " " + CustomerData.points;
+customerPoints.innerText = "Points: " + CustomerData.points;
 
 function render_board(){
   play_board.forEach((element, index) => {
@@ -91,7 +91,7 @@ function check_for_winner(){
     winner.innerText = "Winner is player!!\nYou won 500 points.";
     winner.classList.add("playerWin");
     CustomerData.points += 500;
-    sessionStorage.setItem("customer-data", CustomerData);
+    sessionStorage.setItem("customer-data", JSON.stringify(CustomerData));
   } else if (winner_found == computer) {
     computer_score += 1;
     winner.innerText = "You lost!\nYou lost 500 points.";
@@ -133,7 +133,7 @@ function addComputerMove(){
 
 function reset_board(){
   CustomerData.points -= 250;
-  customerPoints.innerText += customerPoints.innerText + " " + CustomerData.points;
+  customerPoints.innerText = "Points: " + CustomerData.points;
   play_board = ["", "", "", "", "", "", "", "", ""];
   board_full = false;
   winner_found = false;

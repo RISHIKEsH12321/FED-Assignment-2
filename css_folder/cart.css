@@ -1,11 +1,18 @@
+/* h1{
+    align-self: center;
+    justify-content: center ;
+    margin-left: 50%;
+} */
+
 .cart-item-pic {
-    border: 5px solid black;
+    /* border: 5px solid black; */
     width: 100%;
     max-width: 300px;
     height: auto;
     display: block; /* Add display: block; for vertical-align to work */
     margin: 0 auto; /* Center the image horizontally */
 }
+
 
 td {
     vertical-align: middle;
@@ -15,6 +22,32 @@ td {
 td:nth-child(1) {
     width: 20%;
     height: auto;
+}
+
+@media only screen and (max-width: 420px){
+    .cart-item-pic {
+        max-width: 100%; /* Adjust max-width for smaller screens */
+        /* border: 3px solid black; Adjust border for smaller screens */
+    }
+    thead{
+        display: none;
+    }
+
+    .table{
+        padding-left: 5px !important;
+        padding-right: 5px !important;
+    }
+
+    td {
+        width: 100%; /* Make table cells full width on smaller screens */
+        display: block; /* Display table cells as block elements */
+        box-sizing: border-box; /* Include padding and border in the width */
+        margin-bottom: 10px; /* Add some spacing between table rows on smaller screens */
+    }
+
+    td:nth-child(1) {
+        width: 100%; /* Make the first column full width on smaller screens */
+    }
 }
 
 
