@@ -9,12 +9,13 @@
   min-height: 80vh;
   display: flex;
   flex-direction: column;
-  width: 50vh;
+  width: 50vw;
   align-items: center;
   justify-content: center;
   background: #0dcaf0;
   margin: 10px;
   border-radius: 5px;
+  padding: 0% !important;
 }
 
 h1 {
@@ -125,4 +126,12 @@ button:hover {
 
 .draw {
   color: darkorange;
+}
+
+
+@media only screen and (max-width: 420px){
+  .occupied:hover {
+    background: #0dcaf0;
+  }
+
 }

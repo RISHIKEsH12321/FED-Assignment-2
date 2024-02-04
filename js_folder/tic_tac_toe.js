@@ -97,7 +97,7 @@ function check_for_winner(){
     winner.innerText = "You lost!\nYou lost 500 points.";
     winner.classList.add("computerWin");
     CustomerData.points -= 500;
-    sessionStorage.setItem("customer-data", CustomerData);
+    sessionStorage.setItem("customer-data", JSON.stringify(CustomerData));
   } else if (board_full) {
     winner.innerText = "Draw!\nYou gained 0 points.";
     winner.classList.add("draw");
