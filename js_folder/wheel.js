@@ -1,4 +1,32 @@
- function rotateFunction(){
+var customerData;
+document.addEventListener("DOMContentLoaded",function(){
+    customerData = JSON.parse(sessionStorage.getItem("customer-data"));
+    var customerId = customerData ? customerData._id : null;
+
+    if (customerId === null) {
+        alert("Customer data or customer id is null. Cannot proceed with spin the wheel.");
+        window.location.href = 'signUp.html';
+        return; // Stop the rest of the function
+    }
+
+    console.log(customerData.points)
+})
+
+function rotateFunction(){
+    if (customerData["points"] < 100){
+        alert("You dont not have enough points to spin the wheel")
+        document.querySelector("button").style.display = "none";
+        document.querySelector("button").disabled = true;
+        console.log(customerData["points"])
+        return;
+    }
+    else{
+        document.querySelector("button").disabled = false;
+        console.log(customerData.points )
+        customerData["points"] -= 100;
+    }
+    
+    console.log(customerData.points)
     var min = 1024;
     var max = 9999;
     var deg = Math.floor(Math.random() * (max - min)) + min;
