@@ -145,8 +145,4 @@ span{
     font-size: 22px;
     cursor: pointer;
 }
-.spin:active{
-    width: 70px;
-    height: 70px;
-    font-size: 20px;
-}
+
