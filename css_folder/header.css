@@ -1,11 +1,18 @@
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+}
+
+
 #logo{
     height: 80px;
 }
 
 #imgbutton{
-    flex-grow: 1;
-    justify-content: right;
-    align-items: flex-end;
+    display: flex;
+    margin: 5px;
 }
 .sidepng{
     height: 50px;
@@ -21,4 +28,41 @@ nav{
 .navbar-item{
     color: black;
     text-decoration: none;
+}
+
+
+@media only screen and (max-width: 420px) {
+    .icon-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #imgbutton{
+        display: flex;
+        margin-top: 20px;
+        margin-left: 25px;
+        justify-content: center;
+    }
+
+    #logo{
+        height: 20vw;
+    }
+
+    .sidepng{
+        height: 15vw;
+        max-width: 100%;
+        margin-right: 50px;
+    }
+    
+    #navigation-bar{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        width: 100vw;
+    }
+    #navigation-bar a{
+        margin:5px;
+    }
+
 }

@@ -56,6 +56,9 @@ function CreateItem(data){
     img.className = "item-pics";
     div.appendChild(img);
 
+    //Creating the div containing the price and the name for styling purposes
+    var details = document.createElement('div');
+    details.className = "details-block";
     //Creating the name, adding the additional info to url link and adding it to the block
     var name = document.createElement('a');
     name.className = "item-name";
@@ -63,12 +66,14 @@ function CreateItem(data){
     name.dataset.customValue = data._id;
     name.onclick = passObjectData;
     name.textContent = data.name;
-    div.appendChild(name);
+    details.appendChild(name);
 
     var price = document.createElement('p');
     price.className = "item-price";
     price.textContent = "$" + parseFloat(data.price).toFixed(2);
-    div.appendChild(price)
+    details.appendChild(price)
+
+    div.appendChild(details)
 
     return div;
 }
