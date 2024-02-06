@@ -141,6 +141,12 @@ span{
 
 
 @media only screen and (max-width: 420px){
+    #container{
+        display: block;
+    }
+    #mainbox{
+        width: 300px;
+    }
     #box{
         height: 287px;
         width: 287px;
@@ -174,7 +180,8 @@ span{
         left: 68px;
     }
     .spin{
-        top: 28%;
+        left: 48%;
+        top: 29%;
         width: 50px;
         height: 50px;
         font-size: initial;
