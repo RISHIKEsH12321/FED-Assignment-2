@@ -104,11 +104,14 @@ function DeleteCartItem(event, itemId){
 
     fetch(url, settings)
     .then(response => {
-        itemBlock.remove();        
+        itemBlock.remove();   
+        UpdateTotal();     
     })      
     .catch(error => {
         console.error('Error:', error);
     });
+
+    
     
 }
 
@@ -137,24 +140,26 @@ document.getElementById("checkoutbtn").addEventListener("click",function(e){
 
     let total = 0
 
-    fetch("https://electronics-a398.restdb.io/rest/cart", settings)
-    .then(response => response.json())        
-    .then(data => {
-        for (var i = 0; i < data.length; i++){                
-            if (data[i].customer_id === id ){
-                console.log(data[i]);
-                total += data[i]["price"] * data[i]["quantity"];
-                console.log(total);
-                //data[i].points += Math.ceil(total/25);
-            }
-        }  
-        var t = document.getElementById("total");
-        t.innerHTML = "Total: $" + total;
-        console.log("total: " + t);
-        //data.points += Math.ceil(total/25);
-        //console.log(data);
-        //sessionStorage.setItem("customer-data", data);
-    })
+    // fetch("https://electronics-a398.restdb.io/rest/cart", settings)
+    // .then(response => response.json())        
+    // .then(data => {
+    //     for (var i = 0; i < data.length; i++){                
+    //         if (data[i].customer_id === id ){
+    //             console.log(data[i]);
+    //             total += data[i]["price"] * data[i]["quantity"];
+    //             console.log(total);
+    //             //data[i].points += Math.ceil(total/25);
+    //         }
+    //     }  
+    //     var t = document.getElementById("total");
+    //     t.innerHTML = "Total: $" + total;
+    //     console.log("total: " + t.innerText);
+    //     //data.points += Math.ceil(total/25);
+    //     //console.log(data);
+    //     //sessionStorage.setItem("customer-data", data);
+    // })
+
+    UpdateTotal();
  
 });
 
@@ -263,4 +268,20 @@ function ClearCart(data){
         DeleteCartItemInDatabase(deleteIdID);
         console.log("Called Delete: " + deleteIdID);
     }
+}
+
+function UpdateTotal(){
+    var cartItems = document.querySelectorAll("#item-cart-display tr");
+
+    var total = 0;
+    cartItems.forEach(function(item) {
+        var quantity = item.querySelector("td:nth-child(5)").innerText; 
+        var price = item.querySelector("td:nth-child(4)").innerText.replace("$", ""); 
+
+        total += parseFloat(price) * parseInt(quantity);
+        console.log("Total of all items is: " + total);
+        
+    });
+    
+    document.getElementById("total").innerText = "$" + parseFloat(total).toFixed(2);;
 }
