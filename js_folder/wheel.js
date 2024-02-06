@@ -101,3 +101,7 @@ function UpdatePoints(){
             console.error('Error:', error);
         });
 }
+
+document.addEventListener("beforeunload",function(){
+    sessionStorage.setItem("customer-data", JSON.stringify(CustomerData));
+})
