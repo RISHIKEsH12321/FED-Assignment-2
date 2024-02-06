@@ -1,8 +1,5 @@
-footer {
-    background-color: #f8f9fa;
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    margin-top: auto; /* Push the footer to the bottom */
+@media only screen and (max-width: 420px){
+    #follow{
+        padding-bottom: 15px !important;
+    }
 }
