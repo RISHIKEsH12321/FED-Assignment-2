@@ -50,7 +50,7 @@ function CreateCartItem(data){
     block.id = id + "block";
     var picBlock = document.createElement("td");
     var imgElement = document.createElement("img");
-    imgElement.src = "/pictures/item-pics/" + picFilePath + ".jpg";
+    imgElement.src = "pictures/item-pics/" + picFilePath + ".jpg";
     imgElement.className = "cart-item-pic";
     picBlock.appendChild(imgElement);
     block.appendChild(picBlock);
