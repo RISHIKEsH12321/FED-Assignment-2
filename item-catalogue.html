@@ -12,22 +12,29 @@
     <!-- Header -->
     <header w3-include-html="header.html"> 
     </header>
-
+    
+    <!-- Radio Filter -->
     <form class = "filter">
         <!-- id="option" -->
-        <input type="radio" class="btn-check" id = "option-all" name="category" data-value="all" role="button" oninput="filterCreator(event)" checked>
+        <input type="radio" class="btn-check" id = "option-all" name="category" data-value="all" role="button" checked>
         <label class="btn btn-info" for="option-all">All</label>
-        <input type="radio" class="btn-check" id = "option-laptop" name="category" data-value="laptop" oninput="filterCreator(event)">
+        <input type="radio" class="btn-check" id = "option-laptop" name="category" data-value="laptop">
         <label class="btn btn-info" for="option-laptop">Laptops</label>
-        <input type="radio" class="btn-check" id = "option-mouse" name="category" data-value="mouse" oninput="filterCreator(event)">
+        <input type="radio" class="btn-check" id = "option-mouse" name="category" data-value="mouse">
         <label class="btn btn-info" for="option-mouse">Mouses</label>
-        <input type="radio" class="btn-check" id = "option-keyboard" name="category" data-value="keyboard" oninput="filterCreator(event)">
+        <input type="radio" class="btn-check" id = "option-keyboard" name="category" data-value="keyboard">
         <label class="btn btn-info" for="option-keyboard">Keyboard</label>
-        <input type="radio" class="btn-check" id = "option-phone" name="category" data-value="phone" oninput="filterCreator(event)">
+        <input type="radio" class="btn-check" id = "option-phone" name="category" data-value="phone">
         <label class="btn btn-info" for="option-phone">Phones</label>
-        <input type="radio" class="btn-check" id = "option-headphone" name="category" data-value="headphone" oninput="filterCreator(event)">
+        <input type="radio" class="btn-check" id = "option-headphone" name="category" data-value="headphone">
         <label class="btn btn-info" for="option-headphone">Headphones</label>
     </form>
+
+    <!-- Add this code where you want to place the search bar, preferably within the <header> or any suitable section -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" class="form-control" id="exampleFormControlInput1" placeholder="Enter item name...">
+    </div>
+
 
     <section class = "items-container">
         

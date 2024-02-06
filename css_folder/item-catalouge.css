@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 /* Label of options */
 .filter label {
@@ -10,6 +11,19 @@
     width: fit-content;
     margin: 10px;
 }
+
+/* Search Bar */
+.search-bar{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    padding: 0 20vw 0 20vw;
+}
+
+.search-bar input{
+    height: 35px;
+}
+
 
 /* Container tha contains all the item instances */
 .items-container {
