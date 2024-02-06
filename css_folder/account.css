@@ -28,4 +28,8 @@
     .btn{
         margin-bottom: 10px;
     }
+
+    #show-cutomer-details{
+        width: 300px !important;
+    }
 }
