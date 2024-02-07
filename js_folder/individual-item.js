@@ -1,3 +1,6 @@
+const toastLiveExample = document.getElementById('liveToast');
+
+
 document.addEventListener("DOMContentLoaded", function (){
 
     const APIKEY = "65ab8ff7384ac111a81414ff";
@@ -16,10 +19,10 @@ document.addEventListener("DOMContentLoaded", function (){
     }
 
     objectDataParam = objectDataParam.replace(/["']/g, '');
-    var lottieContainer = document.getElementById('lottie-container');
+    var lottie = document.getElementById('ani');
 
     // Show Lottie animation container before making the API request
-    lottieContainer.style.display = 'block';
+    lottie.style.display = 'block';
 
     var itemURL = "https://electronics-a398.restdb.io/rest/item/" + objectDataParam;
 
@@ -69,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function (){
             }
             document.getElementById("add-to-cart").hidden = false; 
             document.getElementById("quantity-block").hidden = false; 
-            lottieContainer.style.display = 'none';
+            lottie.style.display = 'none';
             document.getElementById("main-img").style.display = "block";
             document.getElementById("item-details").style.display = "block";
             
@@ -80,9 +83,12 @@ function AddToCart(event){
     var customerData = JSON.parse(sessionStorage.getItem("customer-data"));
     var customerId = customerData ? customerData._id : null;
 
-    if (customerId === null) {
-        alert("Customer data or customer id is null. Cannot proceed with adding to cart.");
-        return; // Stop the rest of the function
+    if (!customerData) {
+        event.preventDefault();
+        const toast = new bootstrap.Toast(toastLiveExample);
+
+        toast.show();
+        return;
     }
     var radioButtons = document.getElementsByName("color_choice");
 

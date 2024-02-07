@@ -1,21 +1,24 @@
 .main-details{
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;   
+    justify-content: center; 
 }
 
 #image-container {
-    width: 300px; /* Set a fixed width for the image container */
+    width: 300px; 
     height: auto;
     margin: 5vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #main-img {
     width: 100%;
     height: auto;
 }
-
 .details-container {
     margin: 5vw;
     flex-grow: 1;
@@ -79,10 +82,22 @@
     /* border: 2px solid #0d6efd; */
 }
 
+/* Animation Block */
+.animation-container{
+    display: flex !important;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 420px){
     #item-details{
         margin-top: 0%;
         padding-top: 10px;
     }
-    
+    #main-img {
+        max-height: 50vw;
+        width: auto;        
+    }
+    #image-container{
+        justify-content: center;
+    }
 }

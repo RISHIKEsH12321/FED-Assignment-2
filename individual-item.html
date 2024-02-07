@@ -5,16 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css_folder/individual-item.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <title>Document</title>
+    <title>Item</title>
 </head>
 <body>
     <header w3-include-html="header.html"> 
     </header>
 
-    <div id="lottie-container" class="animation-container" style="display: none;">
-        <dotlottie-player src="https://lottie.host/d38a0961-78ff-4833-bb38-7b19bb2c207e/2lmEBmaity.json" 
-        background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
-    </div>
+    <div id="lottie-container" class="animation-container">
+      <dotlottie-player id = "ani" src="https://lottie.host/d38a0961-78ff-4833-bb38-7b19bb2c207e/2lmEBmaity.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop="" autoplay=""></dotlottie-player>
+    </div>  
+
+
+    <!-- Notify User to Login -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header">
+            <strong class="me-auto">TechStudio</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            You must login to add to cart.
+          </div>
+        </div>
+      </div>
+  
 
     <section class = "main-details">
         <div id="image-container">

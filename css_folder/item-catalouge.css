@@ -76,11 +76,12 @@
     font-weight: bold;
 }
 
-/* Block holding the filter options*/
-.animation-container1{
-    display: flex;
+/* Animation Block */
+.animation-container{
+    display: flex !important;
     justify-content: center;
 }
+
 
 @media only screen and (max-width: 420px){
     .filter {

@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     var itemContainer = document.querySelector('.items-container');
-    var lottieContainer = document.getElementById('lottie-container');
+    var lottie = document.getElementById('ani');
 
     // Show Lottie animation container before making the API request
-    lottieContainer.style.display = 'block';
+    lottie.style.display = 'block';
 
     var radioInputs = document.querySelectorAll('input[name="category"]');
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Created one item");
             }
             // Hide Lottie animation container after API request is complete
-            lottieContainer.style.display = 'none';
+            lottie.style.display = 'none';
         })
         
     var searchInput = document.getElementById('searchInput');

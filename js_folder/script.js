@@ -45,3 +45,13 @@ function includeHTMLFooter() {
     }
   }
 }
+
+function check(e){
+  e.preventDefault();
+  var customerData = JSON.parse(sessionStorage.getItem("customer-data"));
+
+    if (customerData == null) {
+        window.alert("You must login to access cart.")
+        return;
+    }
+}
