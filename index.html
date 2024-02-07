@@ -13,12 +13,13 @@
     <!--Header-->
     <header w3-include-html="header.html" class="bg-light"> 
     </header>
+
     <!--Promotions/events-->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        </ol>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-100" src="Images/Promotional1.png" alt="First slide">
@@ -27,107 +28,131 @@
             <img class="d-block w-100" src="Images/Promotional2.png" alt="Second slide">
           </div>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <!-- <span class="sr-only">Previous</span> -->
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <!-- <span class="sr-only">Next</span> -->
-        </a>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+    <br>
+    <br>
     <br>
     <!--Laptop Best seller-->
     <div class="container">
-        <h2>Best Seller for <br> Laptop
-        </h2>
+        <h2>Best Sellers for Laptop </h2>
         <div class="row">
             <div class="col-sm border border-dark product" >
-                <br>
                 <img src="pictures/item-pics/ALIENWARE-M18-GAMING-LAPTOP.jpg" alt="Product 1">
-                <a href="individual-item.html?ItemId=65acc93523c8ba480000122e"><p>ALIENWARE M18 GAMING LAPTOP</p></a>
-                <!-- <p>ALIENWARE M18 GAMING LAPTOP</p> -->
-                <p>$1750</p>
+                <div class = "details">
+                    <a href="individual-item.html?ItemId=65acc93523c8ba480000122e"><p>ALIENWARE M18 GAMING LAPTOP</p></a>
+                    <!-- <p>ALIENWARE M18 GAMING LAPTOP</p> -->
+                    <p>$1750</p>
+                </div>
             </div>
+
             <div class="col-sm border border-dark product">
                 <br>
                 <img src="pictures/item-pics/ASUS-Vivobook-Pro-15X-OLED.jpg" alt="Product 2">
-                <a href="individual-item.html?ItemId=65bdf613d4a556290000802c"><p>ASUS Vivobook Pro 15X <br> OLED</p></a>
-                <p>$2,851</p>
+                <div class = "details">
+                    <a href="individual-item.html?ItemId=65bdf613d4a556290000802c"><p>ASUS Vivobook Pro 15X <br> OLED</p></a>
+                    <p>$2,851</p>
+                </div>
             </div>
+
             <div class="col-sm border border-dark product">
-                <br>
                 <img src="pictures/item-pics/MSI-GF63-Thin.jpg" alt="Product 3">
-                <a href="individual-item.html?ItemId=65bdf7e4d4a5562900008221"><p>MSI GF63 Thin</p></a>
-                <p>$1,566</p>
+                <div class = "details">
+                    <a href="individual-item.html?ItemId=65bdf7e4d4a5562900008221"><p>MSI GF63 Thin</p></a>
+                    <p>$1,566</p>
+                </div>
             </div>
+
             <div class="col-sm border border-dark product">
                 <img src="pictures/item-pics/ACER-Swift-Go-14.jpg" alt="Product 4">
-                <a href="individual-item.html?ItemId=65bdf875d4a5562900008225"><p>ACER Swift Go 14</p></a>
-                <p>$998</p>
+                <div class = "details">
+                    <a href="individual-item.html?ItemId=65bdf875d4a5562900008225"><p>ACER Swift Go 14</p></a>
+                    <p>$998</p>
+                </div>
             </div>
+
         </div>
     </div>
     <br>
     <!--Keyboard Best seller-->
     <div class="container">
-        <h2>Best Seller for <br> Keyboard
-        </h2>
+        <h2>Best Sellers for Keyboard</h2>
         <div class="row">
             <div class="col-sm border border-dark product">
-                <br>
-                <br>
                 <img src="pictures/item-pics/Logitech-Pop-Keys.jpg" class="w-100" alt="Product 1">
-                <br><br><br>
-                <a href="individual-item.html?ItemId=65bdf937d4a556290000822a"><p>Logitech Pop Keys</p></a>
-                <p>$100</p>
+                <div class = "details">
+                    <a href="individual-item.html?ItemId=65bdf937d4a556290000822a"><p>Logitech Pop Keys</p></a>
+                    <p>$100</p>
+                </div>
             </div>
+
             <div class="col-sm border border-dark product">
                 <img src="pictures/item-pics/Razer-BlackWidow-V4-Pro.jpg" alt="Product 2">
-                <a href="individual-item.html?ItemId=65bdfa0fd4a5562900008230"><p>Razer BlackWidow V4 Pro</p></a>
-                <p>$284</p>
+                <div class = "details">
+                    <a href="individual-item.html?ItemId=65bdfa0fd4a5562900008230"><p>Razer BlackWidow V4 Pro</p></a>
+                    <p>$284</p>
+                </div>
             </div>
+
             <div class="col-sm border border-dark product">
                 <img src="pictures/item-pics/Logitech-Pro-X.jpg" alt="Product 3">
-                <a href="individual-item.html?ItemId=65bdfa71d4a5562900008409"><p>Logitech Pro X</p></a>
-                <p>$150</p>
+                <div class = "details">
+                    <a href="individual-item.html?ItemId=65bdfa71d4a5562900008409"><p>Logitech Pro X</p></a>
+                    <p>$150</p>
+                </div>
             </div>
+
             <div class="col-sm border border-dark product">
                 <img src="pictures/item-pics/NZXT-Function-TKL.jpg" alt="Product 4">
-                <a href="individual-item.html?ItemId=65bdfb25d4a5562900008427"><p>NZXT Function TKL</p></a>
-                <p>$130</p>
+                <div class = "details">
+                    <a href="individual-item.html?ItemId=65bdfb25d4a5562900008427"><p>NZXT Function TKL</p></a>
+                    <p>$130</p>    
+                </div>
             </div>
         </div>
     </div>
     <br>
+    
     <!--Mouse Best seller-->
     <div class="container">
-        <h2>Best Seller for <br> Mouse
-        </h2>
+        <h2>Best Sellers for Mouse</h2>
         <div class="row">
             <div class="col-sm border border-dark product">
                 <img src="pictures/item-pics/Razer-Viper-V2-Pro.jpg" class="w-50" alt="Product 1">
-                <a href="individual-item.html?ItemId=65bdfbbfd4a5562900008435"><p>Razer Viper V2 Pro</p></a>
-                <p>$130</p>
+                <div class = "details">
+                    <a href="individual-item.html?ItemId=65bdfbbfd4a5562900008435"><p>Razer Viper V2 Pro</p></a>
+                    <p>$130</p>
+                </div>
             </div>
+
             <div class="col-sm border border-dark product">
-                <br>
                 <img src="pictures/item-pics/Logitech-G502-LIGHTSPEED.jpg" class="w-50" alt="Product 2">
-                <br><br>
-                <a href="individual-item.html?ItemId=65bdfc5ed4a5562900008444"><p>Logitech G502 LIGHTSPEED</p></a>
-                <p>$150</p>
+                <div class = "details">
+                    <a href="individual-item.html?ItemId=65bdfc5ed4a5562900008444"><p>Logitech G502 LIGHTSPEED</p></a>
+                    <p>$150</p>
+                </div>
             </div>
             <div class="col-sm border border-dark product">
-                <br>
                 <img src="pictures/item-pics/Fantech-Aria-XD7.jpg" class="mouse" alt="Product 3">
-                <br><br>
-                <a href="individual-item.html?ItemId=65bdfd2ed4a556290000844d"><p>Fantech Aria XD7</p></a>
-                <p>$70</p>
+                <div class = "details">
+                    <a href="individual-item.html?ItemId=65bdfd2ed4a556290000844d"><p>Fantech Aria XD7</p></a>
+                    <p>$70</p>
+                </div>
             </div>
+
             <div class="col-sm border border-dark product">
                 <img src="pictures/item-pics/Razer-DeathAdder-V3.jpg" class="w-50" alt="Product 4">
-                <a href="individual-item.html?ItemId=65bdfd8dd4a5562900008451"><p>Razer DeathAdder V3</p></a>
-                <p>$170</p>
+                <div class = "details">
+                    <a href="individual-item.html?ItemId=65bdfd8dd4a5562900008451"><p>Razer DeathAdder V3</p></a>
+                    <p>$170</p>
+                </div>
             </div>
         </div>
     </div>

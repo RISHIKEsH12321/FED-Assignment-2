@@ -9,6 +9,7 @@
     border: 1px solid #dee2e6;
     border-radius: 8px;
     height: 350px;
+    margin: 5px;
 }
  
 .product:hover {
@@ -18,15 +19,35 @@
     transition: all 0.2s;
 }
 
+.product img{
+    width: 100%;
+    max-width: 80%;
+    height: auto;
+    /* max-height: 10rlh; */
+    max-height: 80%;
+}
+
+.details{
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 420px){
     .product {
-        width: 180px !important;
+        /* width: 180px !important; */
+        width: 75vw !important;
+
     }
     .product img{
         max-width: 100%;
     }
 
     .row{
-        margin-left: 15px !important;
+        /* margin-left: 15px !important; */
+        justify-content: center;
+    }
+    h2{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5% !important;
     }
 }
