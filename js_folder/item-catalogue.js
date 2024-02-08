@@ -76,36 +76,40 @@ function CreateItem(data){
 
 function filterCreator(e) {
     e.preventDefault();
-    
-    var filter = e.target.dataset.value;
 
+    var filter = e.target.dataset.value;
     // Get all item blocks
     var itemBlocks = document.querySelectorAll('.item-block');
 
     // Iterate through each item block and check if it belongs to the selected category
     itemBlocks.forEach(function (itemBlock) {
-        // var itemCategory = itemBlock.querySelector('.btn.btn-info').textContent.toLowerCase();
         var category = itemBlock.getAttribute('data-item-cat');
+
         // If the item category matches the selected filter or the filter is 'all', display the item; otherwise, hide it
         if (filter === 'all' || category === filter) {
-            itemBlock.style.display = 'block';
+            itemBlock.style.display = 'block flex';
         } else {
-            itemBlock.style.display = 'none';
+            itemBlock.style.display = 'none';            
         }
     });
 }
 
 
+
 function performSearch() {
     var searchInput = document.getElementById('searchInput');
-    var searchTerm = searchInput.value.trim().toLowerCase();
+    var searchTerm = searchInput.value.toLowerCase();
 
+    // Get all item blocks
     var itemBlocks = document.querySelectorAll('.item-block');
 
+    // Iterate through each item block and check if it contains the search term
     itemBlocks.forEach(function (itemBlock) {
         var itemName = itemBlock.querySelector('.item-name').textContent.toLowerCase();
-        if (itemName.includes(searchTerm) || searchTerm === '') {
-            itemBlock.style.display = 'block';
+
+        // If the item name contains the search term, display the item; otherwise, hide it
+        if (itemName.includes(searchTerm)) {
+            itemBlock.style.display = 'block flex';
         } else {
             itemBlock.style.display = 'none';
         }
