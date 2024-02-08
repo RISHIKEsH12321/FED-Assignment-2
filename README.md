@@ -68,6 +68,9 @@ Website Theme (**Electronic E-Commerce**)
 12. Razer-BlackWidow-V4-Pro.jpg
 13. Razer-DeathAdder-V3.jpg
 14. Razer-Viper-V2-Pro.jpg
+15. Samsung Galaxy A13.jpg
+16. Srhythm NC25.jpg
+17. Sony-WH-CH520-Wireless-Headphones.jpg
 
 ## Idea
 1. All webpage (header.html and footer.html)
@@ -136,7 +139,18 @@ Razer DeathAdder V3
 https://www.amazon.sg/Razer-DeathAdder-Wireless-Gaming-Mouse/dp/B0B6XZLNHQ
 
 Phones<br>
+iPhone 12 & 15
+https://www.apple.com/sg/
 
+Samsung Galaxy A13
+https://www.amazon.sg/dp/B09YDB11Z8/ref=twister_B09YM2BJ66?_encoding=UTF8&th=1
+
+Headphones<br>
+Sony WH-CH520
+https://www.amazon.sg/Srhythm-NC25-Cancelling-Headphones-Lightweight/dp/B083S6Q8VK/ref=sr_1_16?crid=HN07Z1RKKDRZ&keywords=headphones&qid=1707374402&sprefix=headphon%2Caps%2C285&sr=8-16&th=1
+
+Srhythm NC25
+https://www.amazon.sg/Sony-WH-CH520-Headphones-Bluetooth-Microphone/dp/B0BS1PRC4L/ref=sr_1_5?crid=HN07Z1RKKDRZ&keywords=headphones&qid=1707374402&sprefix=headphon%2Caps%2C285&sr=8-5&th=1
 
 ## Github Page
 https://rishikesh12321.github.io/FED-Assignment-2/
