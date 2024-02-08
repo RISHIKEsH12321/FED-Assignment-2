@@ -11,4 +11,9 @@ function check(event){
 
         toast.show();
     }
+    else {
+        // Navigate to the link's href after checking
+        window.location.href = event.currentTarget.getAttribute('href');
+    }
+
 }
