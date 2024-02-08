@@ -1,7 +1,12 @@
 # FED-Assignment-2
 Website Theme (**Electronic E-Commerce**)
-## API
-1. RestDB
+## Technologies Used
+- RestDB
+    - Used to store data of customer account/cart details/products
+- JQuery
+    - Used GET/PUT/POST/DELETE method for the API
+- Lottie Animation
+    - Used for loading catalogue
 
 ## Files
 1. cart.html 
