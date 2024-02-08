@@ -55,11 +55,11 @@ seamless so that users will not be confused when using the website.
  
 ## Testing
 1. Sign Up page
-  * No data Validation Causing Errors when posting to RestDB
+   * No data Validation Causing Errors when posting to RestDB
 2. Cart page
-  * No Data Validation before final checkout
+   * No Data Validation before final checkout
 3. Tic Tac Toe Page
-  * Minuses points even if it is 0. Goes into Negative Values
+   * Minuses points even if it is 0. Goes into Negative Values
  
 ## Files
 1. cart.html 
