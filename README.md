@@ -1,6 +1,5 @@
 # FED-Assignment-2
 Website Theme (**Electronic E-Commerce**)
-
 ## API
 1. RestDB
 
@@ -99,8 +98,8 @@ Website Theme (**Electronic E-Commerce**)
 
 
 ## References
-### Images
-Laptop
+### pictures
+Laptop <br>
 ASUS Vivobook Pro 15X
 https://www.amazon.sg/ASUS-VivoBook-Display-Core-i7-12650H-K6501ZM-EB74/dp/B0B7R2XQCB?th=1
  
@@ -110,7 +109,7 @@ https://www.amazon.sg/MSI-GF63-Thin-Quad-Core-i5-10300H/dp/B09C8DTPMN
 ACER Swift Go 14
 https://store.acer.com/en-sg/sfg14-71-70vu
  
-Keyboard
+Keyboard<br>
 logitech pop keys
 https://www.amazon.sg/Logitech-Wireless-Mechanical-Keyboard-Customizable/dp/B09RPSM8YR
  
@@ -123,7 +122,7 @@ https://www.logitechg.com/en-sg/products/gaming-keyboards/pro-x-gaming-keyboard.
 NZXT Function TKL
 https://www.amazon.sg/NZXT-Function-TKL-Tenkeyless-Hot-Swappable/dp/B09R93ZB4J
 
-Mouse
+Mouse <br>
 Razer Viper V2 Pro
 https://www.amazon.sg/Razer-HyperSpeed-Wireless-Gaming-Mouse/dp/B09VCR969M?th=1
  
@@ -136,5 +135,8 @@ https://www.amazon.sg/FANTECH-XD7-Wireless-Gaming-Mouse/dp/B0B7CYT533
 Razer DeathAdder V3
 https://www.amazon.sg/Razer-DeathAdder-Wireless-Gaming-Mouse/dp/B0B6XZLNHQ
 
+Phones<br>
+
 
 ## Github Page
+https://rishikesh12321.github.io/FED-Assignment-2/
