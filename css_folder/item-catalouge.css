@@ -36,7 +36,7 @@
 
 /* Block that contains all info of one item*/
 .item-block {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content:space-around; 
@@ -58,8 +58,8 @@
 
 /* Pic of item in block*/
 .item-pics {
-    width: 100%;
-    max-width: 150px;
+    width: auto;
+    /* max-width: 150px; */
     height: auto;
     max-height: 80%;
 }
@@ -97,5 +97,13 @@
         grid-template-columns: repeat(1, 1fr);
         gap: 20px; 
         margin: 50px;
+    }
+
+    /* .item-block{
+        width: 50vw;
+    } */
+
+    .item-pics{
+        width: 50vw;
     }
 }
