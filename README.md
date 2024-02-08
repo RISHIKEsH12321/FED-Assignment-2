@@ -11,8 +11,7 @@ seamless so that users will not be confused when using the website.
 **Purpose** -> To allow users to have a fun and seamless experience.
 **Value It Provide** -> Allows uers to win big prizes or points that allow the make bigger purchases.
 
-## Featrues
-
+## Features
 ### Existing Features
 1. All webpage (header.html and footer.html)
     * Header containing the logo and navigation to different web page
@@ -129,6 +128,9 @@ seamless so that users will not be confused when using the website.
 15. Samsung Galaxy A13.jpg
 16. Srhythm NC25.jpg
 17. Sony-WH-CH520-Wireless-Headphones.jpg
+18. ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
+
+
 
 ## References
 ### pictures
