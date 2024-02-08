@@ -202,3 +202,6 @@ https://www.amazon.sg/Sony-WH-CH520-Headphones-Bluetooth-Microphone/dp/B0BS1PRC4
 
 ## Github Page
 https://rishikesh12321.github.io/FED-Assignment-2/
+
+## Wireframe
+Figma Link: https://www.figma.com/file/Hw3fS8C2d3VRlRaJjFwiZu/FED-assignment-2?type=design&node-id=0-1&mode=design
