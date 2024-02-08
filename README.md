@@ -7,9 +7,9 @@ will have the chance to win big by spending points which they can earn via purch
 seamless so that users will not be confused when using the website.
 
 ## Design Process
-** Users ** -> Those who wish to purchase electronics online.
-** Purpose ** -> To allow users to have a fun and seamless experience.
-** Value It Provide ** -> Allows uers to win big prizes or points that allow the make bigger purchases.
+**Users** -> Those who wish to purchase electronics online.
+**Purpose** -> To allow users to have a fun and seamless experience.
+**Value It Provide** -> Allows uers to win big prizes or points that allow the make bigger purchases.
 
 ## Featrues
 
@@ -43,6 +43,8 @@ seamless so that users will not be confused when using the website.
 ### Features Left to Implement
 1. Cart Page
    * Redeem Points and Vouchers
+   * Check Details Before CheckOut
+
 ## Technologies Used
 - RestDB
     - Used to store data of customer account/cart details/products
@@ -50,7 +52,15 @@ seamless so that users will not be confused when using the website.
     - Used GET/PUT/POST/DELETE method for the API
 - Lottie Animation
     - Used for loading catalogue
-
+ 
+## Testing
+1. Sign Up page
+  * No data Validation Causing Errors when posting to RestDB
+2. Cart page
+  * No Data Validation before final checkout
+3. Tic Tac Toe Page
+  * Minuses points even if it is 0. Goes into Negative Values
+ 
 ## Files
 1. cart.html 
 2. footer.html
@@ -119,34 +129,6 @@ seamless so that users will not be confused when using the website.
 15. Samsung Galaxy A13.jpg
 16. Srhythm NC25.jpg
 17. Sony-WH-CH520-Wireless-Headphones.jpg
-
-## Idea
-1. All webpage (header.html and footer.html)
-    * Header containing the logo and navigation to different web page
-    * Footer with Business Enquiry and Socials
-2. Home page (index.html)
-    * Shows promotional events
-    * Show top 4 products of Laptop/Keyboard/Mouse
-3. Login/Sign Up page (login.html and signUp.html)
-    * login page for users to enter email and password
-    * sign up page for users to create a new account
-4. Catalogue page (item-catalogue.html)
-    * Filter to select type of electronic
-    * Search Bar to look for specific device
-    * Show products of electronic devices
-5. Individual product page (individual-item.html)
-    * Select color and quanity
-    * Add to cart option
-    * Details of products
-6. Cart/Checkout page (cart.html)
-    * Show details of every item that has been added to cart
-    * Allows you to remove item from cart
-    * Buttons to go back to shopping or to checkout now
-7. Game page (pay_to_win.html and tic_tac_toe.html and wheel.html)
-    * Get to choose between 2 games 
-    * Tic Tac Toe to win points
-    * Spin the wheel for 100 points to stand a chance to redeem discount
-
 
 ## References
 ### pictures
