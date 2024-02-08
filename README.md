@@ -128,12 +128,9 @@ seamless so that users will not be confused when using the website.
 15. Samsung Galaxy A13.jpg
 16. Srhythm NC25.jpg
 17. Sony-WH-CH520-Wireless-Headphones.jpg
-18. ![Screenshot of a comment on a GitHub issue showing an image, added in the Markdown, of an Octocat smiling and raising a tentacle.](https://myoctocat.com/assets/images/base-octocat.svg)
-
-
 
 ## References
-### pictures
+### Pictures
 Laptop <br>
 ALIENWARE-M18-GAMING-LAPTOP
 https://www.ebay.com.sg/itm/276294917152?hash=item405475dc20:g:HKoAAOSwJN1lpXKC&amdata=enc%3AAQAIAAAA4IQyI2Zcrz2OTrjsGWdRWpLKz%2Fr8iqb%2BtzTliheorDRbSoCKXgNTXHg13M21yXN5VqXjrAKE3I2fU6zuHdd8C%2Feley8sYoCZm5GAR%2Fmq%2FEGNgKkdlP09%2B%2FfQkSRIqtsZBlAK9JLkrZ9ULkEBqAi3OVimH4ywdQFaYq2HtJfDuPHCz1FRUWqBF1G755rrGrrZyiaQyBGstpKEOgcD3%2FMe%2BanehopIxMx8Q1GEurLia5w4bd2XpodL8t5tNOBO7QMLpBeg4Z6%2B5%2BI7yVqU90jS4wkrCP97tBkIlKRo7wG8h%2Fl1%7Ctkp%3ABk9SR6bJ7a6lYw
@@ -186,6 +183,12 @@ https://www.amazon.sg/Srhythm-NC25-Cancelling-Headphones-Lightweight/dp/B083S6Q8
 
 Srhythm NC25
 https://www.amazon.sg/Sony-WH-CH520-Headphones-Bluetooth-Microphone/dp/B0BS1PRC4L/ref=sr_1_5?crid=HN07Z1RKKDRZ&keywords=headphones&qid=1707374402&sprefix=headphon%2Caps%2C285&sr=8-5&th=1
+
+### External Source Code
+**TicTacToe** https://github.com/niladri-1/Tic-Tac-Toe-game
+
+**Lottie Animation** https://lottiefiles.com/animations/10-second-countdown-a9hzndYn0f
+
 
 ## Github Page
 https://rishikesh12321.github.io/FED-Assignment-2/
