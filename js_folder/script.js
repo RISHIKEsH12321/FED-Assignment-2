@@ -54,4 +54,8 @@ function check(e){
         window.alert("You must login to access cart.")
         return;
     }
+  else {
+        // Navigate to the link's href after checking
+        window.location.href = 'cart.html';
+    }
 }
