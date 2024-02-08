@@ -1,5 +1,48 @@
-# FED-Assignment-2
+# TechStudio
 Website Theme (**Electronic E-Commerce**)
+
+We aimed to make online shopping fun and convinient via gamification. To do this, we first created our own 
+e-commerce website using tools such as RestDB, HTML, JS and CSS. After that using JS we made games so that cutomers
+will have the chance to win big by spending points which they can earn via purchasing items. We also made navigation 
+seamless so that users will not be confused when using the website.
+
+## Design Process
+** Users ** -> Those who wish to purchase electronics online.
+** Purpose ** -> To allow users to have a fun and seamless experience.
+** Value It Provide ** -> Allows uers to win big prizes or points that allow the make bigger purchases.
+
+## Featrues
+
+### Existing Features
+1. All webpage (header.html and footer.html)
+    * Header containing the logo and navigation to different web page
+    * Footer with Business Enquiry and Socials  
+2. Home page (index.html)
+    * Shows promotional events
+    * Show top 4 products of Laptop/Keyboard/Mouse
+3. Login/Sign Up page (login.html and signUp.html)
+    * login page for users to enter email and password
+    * sign up page for users to create a new account
+4. Catalogue page (item-catalogue.html)
+    * Filter to select type of electronic
+    * Search Bar to look for specific device
+    * Show products of electronic devices
+5. Individual product page (individual-item.html)
+    * Select color and quanity
+    * Add to cart option
+    * Details of products
+6. Cart/Checkout page (cart.html)
+    * Show details of every item that has been added to cart
+    * Allows you to remove item from cart
+    * Buttons to go back to shopping or to checkout now
+7. Game page (pay_to_win.html and tic_tac_toe.html and wheel.html)
+    * Get to choose between 2 games 
+    * Tic Tac Toe to win points
+    * Spin the wheel for 100 points to stand a chance to redeem discount
+
+### Features Left to Implement
+1. Cart Page
+   * Redeem Points and Vouchers
 ## Technologies Used
 - RestDB
     - Used to store data of customer account/cart details/products
@@ -108,6 +151,9 @@ Website Theme (**Electronic E-Commerce**)
 ## References
 ### pictures
 Laptop <br>
+ALIENWARE-M18-GAMING-LAPTOP
+https://www.ebay.com.sg/itm/276294917152?hash=item405475dc20:g:HKoAAOSwJN1lpXKC&amdata=enc%3AAQAIAAAA4IQyI2Zcrz2OTrjsGWdRWpLKz%2Fr8iqb%2BtzTliheorDRbSoCKXgNTXHg13M21yXN5VqXjrAKE3I2fU6zuHdd8C%2Feley8sYoCZm5GAR%2Fmq%2FEGNgKkdlP09%2B%2FfQkSRIqtsZBlAK9JLkrZ9ULkEBqAi3OVimH4ywdQFaYq2HtJfDuPHCz1FRUWqBF1G755rrGrrZyiaQyBGstpKEOgcD3%2FMe%2BanehopIxMx8Q1GEurLia5w4bd2XpodL8t5tNOBO7QMLpBeg4Z6%2B5%2BI7yVqU90jS4wkrCP97tBkIlKRo7wG8h%2Fl1%7Ctkp%3ABk9SR6bJ7a6lYw
+
 ASUS Vivobook Pro 15X
 https://www.amazon.sg/ASUS-VivoBook-Display-Core-i7-12650H-K6501ZM-EB74/dp/B0B7R2XQCB?th=1
  
