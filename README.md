@@ -61,7 +61,7 @@ seamless so that users will not be confused when using the website.
    * Minuses points even if it is 0. Goes into Negative Values
   
 ## Roles
-Joseph Kwek Jun Yan: header.html, footer.html, index.html, login.html, signUp.html, wheel.html
+Joseph Kwek Jun Yan: header.html, footer.html, index.html, login.html, signUp.html, wheel.html<br>
 Vallimuthu Rishikesh: item-catalogue.html, individual-item.html, cart.html, tic_tac_toe.html, pay_to_win.html
 The student who did the html page did its respective JavaScript.
 
