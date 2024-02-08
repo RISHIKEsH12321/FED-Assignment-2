@@ -7,8 +7,8 @@ will have the chance to win big by spending points which they can earn via purch
 seamless so that users will not be confused when using the website.
 
 ## Design Process
-**Users** -> Those who wish to purchase electronics online.
-**Purpose** -> To allow users to have a fun and seamless experience.
+**Users** -> Those who wish to purchase electronics online. <br>
+**Purpose** -> To allow users to have a fun and seamless experience. <br>
 **Value It Provide** -> Allows uers to win big prizes or points that allow the make bigger purchases.
 
 ## Features
@@ -186,6 +186,8 @@ https://www.amazon.sg/Sony-WH-CH520-Headphones-Bluetooth-Microphone/dp/B0BS1PRC4
 
 ### External Source Code
 **TicTacToe** https://github.com/niladri-1/Tic-Tac-Toe-game
+
+**Spin the Wheel** https://workshops.hackclub.com/spinning_wheel/
 
 **Lottie Animation** https://lottiefiles.com/animations/10-second-countdown-a9hzndYn0f
 
