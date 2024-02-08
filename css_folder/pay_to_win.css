@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
 }
 
 h1, h2, h3 {
@@ -8,56 +9,78 @@ h1, h2, h3 {
     color: #333;
 }
 
-h3{
+h3 {
     justify-self: left;
 }
+
 .bg-light {
     background-color: #f8f9fa;
 }
 
-.flex-box {
-    /* display: flex; */
-    justify-content: space-around;
-    align-items: center; 
-    height: 100%; 
-    padding: 20px;
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+    width: 100vw;
 }
 
-.flex-box div {
-    flex: 1; 
+.flex-box {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.box div {
+    flex: 1;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin: 10px;
     text-align: center;
-}
-
-.flex-box.row{
-    flex-direction: row;
-}
-
-.flex-box.row div{
-    display: flex;
+    width: 80vw;
+    background-color: #fff; /* Set background color */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .flex-box div:nth-child(2) {
-    /* background-color: #f0f0f0;  */
+    background-color: #f0f0f0;
 }
 
-.game-pic{
+.game-pic {
     height: 220px;
     margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.pageLink{
-    
+.pageLink {
+    text-decoration: none;
+    color: #333;
     transition: all 0.3s ease;
+    background-color: #007bff; 
+    color: #007bff; 
+    border-radius: 10px;
 }
 
-.pageLink:hover{
-    transform: scale(1.05);
+.pageLink:hover {
+    transform: scale(1.03);
+    background-color: #0056b3; 
 }
 
-.pageLink div{
-    justify-content: center;
+.pageLink div {
+    width: 20vw;
+    margin: 5vw;
+}
+
+@media only screen and (max-width: 420px){
+    .flex-box{
+        flex-direction: column;
+    }
+
+    .pageLink{
+        display: flex;
+        
+    }
 }
