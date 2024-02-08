@@ -1,3 +1,5 @@
+/*Tic Tac Toe Source Code:
+https://github.com/niladri-1/Tic-Tac-Toe-game*/
 player = "X";
 computer = "O";
 
