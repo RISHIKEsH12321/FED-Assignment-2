@@ -25,7 +25,7 @@ function rotateFunction(){
         console.log(customerData.points)
         customerData["points"] -= 100;
     }
-    
+    /*referenced from: https://workshops.hackclub.com/spinning_wheel/*/
     console.log(customerData.points)
     var min = 1024;
     var max = 9999;
