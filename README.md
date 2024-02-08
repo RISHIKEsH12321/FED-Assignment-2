@@ -59,7 +59,15 @@ seamless so that users will not be confused when using the website.
    * No Data Validation before final checkout
 3. Tic Tac Toe Page
    * Minuses points even if it is 0. Goes into Negative Values
- 
+  
+## Roles
+Joseph Kwek Jun Yan: header.html, footer.html, index.html, login.html, signUp.html, wheel.html
+Vallimuthu Rishikesh: item-catalogue.html, individual-item.html, cart.html, tic_tac_toe.html, pay_to_win.html
+The student who did the html page did its respective JavaScript.
+
+## Media Qeuery
+Max Width = 420px for most mobile phones
+
 ## Files
 1. cart.html 
 2. footer.html
